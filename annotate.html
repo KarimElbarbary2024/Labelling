@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Label It</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Cairo:wght@400;600;700&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --border: #2a2a2a;
+    --text: #f0f0f0;
+    --muted: #555;
+    --pos: #22c55e;
+    --neg: #ef4444;
+    --neu: #3b82f6;
+    --del: #f59e0b;
+    --pos-dim: rgba(34,197,94,0.15);
+    --neg-dim: rgba(239,68,68,0.15);
+    --neu-dim: rgba(59,130,246,0.15);
+  }
+
+  html, body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    overflow: hidden;
+    touch-action: none;
+  }
+
+  /* ── NAME SCREEN ── */
+  #name-screen {
+    position: fixed; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    background: var(--bg);
+    z-index: 100;
+    gap: 24px;
+    padding: 32px;
+  }
+
+  #name-screen h1 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    text-align: center;
+  }
+
+  #name-screen p {
+    color: var(--muted);
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  #name-input {
+    width: 100%;
+    max-width: 320px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  #name-input:focus { border-color: var(--muted); }
+
+  #start-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 14px;
+    background: var(--text);
+    color: var(--bg);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  #start-btn:hover { opacity: 0.85; }
+
+  /* ── MAIN APP ── */
+  #app {
+    display: none;
+    position: fixed; inset: 0;
+    flex-direction: column;
+  }
+
+  /* ── HEADER ── */
+  #header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+
+  #labeler-name {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  #counter {
+    font-size: 0.75rem;
+    color: var(--text);
+    letter-spacing: 0.05em;
+    font-weight: 700;
+  }
+
+  #counter span {
+    color: var(--muted);
+    font-weight: 400;
+  }
+
+  #topic-badge {
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  /* ── CARD AREA ── */
+  #card-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #card {
+    width: 100%;
+    max-width: 560px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: clamp(24px, 5vw, 40px);
+    position: relative;
+    cursor: grab;
+    user-select: none;
+    transition: box-shadow 0.2s;
+    will-change: transform;
+  }
+  #card:active { cursor: grabbing; }
+
+  #card-text {
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: center;
+    word-break: break-word;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #card-meta {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* Swipe hint overlays */
+  #hint-pos, #hint-neg, #hint-neu {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  #hint-pos { background: var(--pos-dim); }
+  #hint-neg { background: var(--neg-dim); }
+  #hint-neu { background: var(--neu-dim); }
+
+  /* ── FEEDBACK FLASH ── */
+  #feedback {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 50;
+  }
+
+  /* ── HINTS BAR ── */
+  #hints {
+    padding: 12px 20px 20px;
+    display: flex;
+    justify-content: center;
+    gap: clamp(12px, 4vw, 32px);
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  .hint-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.05em;
+  }
+
+  .hint-key {
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 0.6rem;
+    font-family: 'Space Mono', monospace;
+  }
+
+  .hint-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+  }
+
+  /* ── ACTION BUTTONS (mobile) ── */
+  #action-btns {
+    display: none;
+    padding: 0 20px 24px;
+    gap: 12px;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .action-btn {
+    flex: 1;
+    max-width: 100px;
+    padding: 16px 0;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .action-btn:active { transform: scale(0.93); }
+
+  #btn-neg  { background: var(--neg-dim); }
+  #btn-neu  { background: var(--neu-dim); }
+  #btn-pos  { background: var(--pos-dim); }
+  #btn-del  { background: rgba(245,158,11,0.12); }
+
+  /* ── DONE SCREEN ── */
+  #done-screen {
+    display: none;
+    position: fixed; inset: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 32px;
+  }
+  #done-screen h2 { font-size: 1.6rem; }
+  #done-screen p  { color: var(--muted); font-size: 0.8rem; line-height: 1.6; }
+
+  /* ── LOADING ── */
+  #loading {
+    position: fixed; inset: 0;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--bg);
+    font-size: 0.8rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    z-index: 200;
+  }
+
+  /* ── TOAST ── */
+  #toast {
+    position: fixed;
+    bottom: 30px; left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 0.75rem;
+    color: var(--muted);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 300;
+  }
+  #toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* ── MOBILE ADJUSTMENTS ── */
+  @media (max-width: 600px) {
+    #hints { display: none; }
+    #action-btns { display: flex; }
+    #card { padding: 28px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Loading -->
+<div id="loading">LOADING COMMENTS...</div>
+
+<!-- Name Screen -->
+<div id="name-screen" style="display:none">
+  <h1>Egyptian Arabizi<br>Annotation Tool</h1>
+  <p>Label comments one by one.<br>Your labels are saved automatically.</p>
+  <input id="name-input" type="text" placeholder="Your name or nickname" autocomplete="off" />
+  <button id="start-btn">START LABELING →</button>
+</div>
+
+<!-- Main App -->
+<div id="app">
+  <div id="header">
+    <span id="labeler-name"></span>
+    <span id="topic-badge">—</span>
+    <span id="counter"><span>labeled </span>0</span>
+  </div>
+
+  <div id="card-area">
+    <div id="card">
+      <div id="card-text"></div>
+      <div id="card-meta">
+        <span id="meta-topic"></span>
+        <span id="meta-likes"></span>
+      </div>
+      <div id="hint-pos">👍</div>
+      <div id="hint-neg">👎</div>
+      <div id="hint-neu">😐</div>
+    </div>
+  </div>
+
+  <!-- Desktop hints -->
+  <div id="hints">
+    <div class="hint-item">
+      <span class="hint-key">←</span>
+      <span class="hint-dot" style="background:var(--neg)"></span>
+      <span>NEGATIVE</span>
+    </div>
+    <div class="hint-item">
+      <span class="hint-key">↑</span>
+      <span class="hint-dot" style="background:var(--neu)"></span>
+      <span>NEUTRAL</span>
+    </div>
+    <div class="hint-item">
+      <span class="hint-key">→</span>
+      <span class="hint-dot" style="background:var(--pos)"></span>
+      <span>POSITIVE</span>
+    </div>
+    <div class="hint-item">
+      <span class="hint-key">SPACE</span>
+      <span class="hint-dot" style="background:var(--del)"></span>
+      <span>DELETE</span>
+    </div>
+  </div>
+
+  <!-- Mobile buttons -->
+  <div id="action-btns">
+    <button class="action-btn" id="btn-neg"  onclick="label('negative')">👎</button>
+    <button class="action-btn" id="btn-neu"  onclick="label('neutral')">😐</button>
+    <button class="action-btn" id="btn-pos"  onclick="label('positive')">👍</button>
+    <button class="action-btn" id="btn-del"  onclick="label('delete')">🗑️</button>
+  </div>
+</div>
+
+<!-- Done Screen -->
+<div id="done-screen">
+  <div style="font-size:3rem">🎉</div>
+  <h2>All done!</h2>
+  <p>No more unlabeled comments right now.<br>Check back later as more are added.</p>
+</div>
+
+<!-- Feedback flash -->
+<div id="feedback"></div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script>
+// ── CONFIG ────────────────────────────────────────────────────────────────────
+const SHEET_URL = "https://script.google.com/macros/s/AKfycbxB2WelK_trMgFri0KKjkzHSQsTnSyn69QD1bRDEL_8xhLV7MxueIrv_0in6xQFIX32/exec";
+
+// IMPORTANT: Replace this with your actual GitHub Pages raw JSON URL after deploying
+// Example: "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/data/raw/twitter_v3.json"
+const JSON_URL  = "twitter_v3.json";
+
+const POLL_MS   = 60_000; // re-check for new comments every 60s
+const STORAGE_KEY      = "arabizi_labeled_ids";
+const STORAGE_COUNT_KEY = "arabizi_labeled_count";
+
+// ── STATE ─────────────────────────────────────────────────────────────────────
+let labeler       = "";
+let allComments   = [];
+let queue         = [];
+let current       = null;
+let labeledCount  = 0;
+let labeledIds    = new Set();
+
+// ── INIT ──────────────────────────────────────────────────────────────────────
+async function init() {
+  // Load labeled IDs from localStorage
+  try {
+    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    labeledIds = new Set(stored);
+    labeledCount = parseInt(localStorage.getItem(STORAGE_COUNT_KEY) || "0");
+  } catch {}
+
+  // Load comments
+  await loadComments();
+
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("name-screen").style.display = "flex";
+
+  // Poll for new comments
+  setInterval(async () => {
+    await loadComments();
+    if (queue.length === 0 && current === null) buildQueue();
+  }, POLL_MS);
+}
+
+async function loadComments() {
+  try {
+    const res  = await fetch(JSON_URL + "?t=" + Date.now());
+    const data = await res.json();
+    allComments = Array.isArray(data) ? data : [];
+  } catch (e) {
+    console.warn("Could not load comments:", e);
+  }
+}
+
+function buildQueue() {
+  // Filter out already labeled
+  const unlabeled = allComments.filter(c => c.id && !labeledIds.has(String(c.id)));
+  // Shuffle
+  queue = unlabeled.sort(() => Math.random() - 0.5);
+}
+
+// ── START ─────────────────────────────────────────────────────────────────────
+document.getElementById("start-btn").addEventListener("click", () => {
+  const val = document.getElementById("name-input").value.trim();
+  if (!val) { showToast("Please enter your name"); return; }
+  labeler = val;
+  document.getElementById("name-screen").style.display = "none";
+  document.getElementById("app").style.display = "flex";
+  document.getElementById("labeler-name").textContent = labeler.toUpperCase();
+  // Show existing count immediately
+  document.getElementById("counter").innerHTML = `<span>labeled </span>${labeledCount}`;
+  buildQueue();
+  nextCard();
+});
+
+document.getElementById("name-input").addEventListener("keydown", e => {
+  if (e.key === "Enter") document.getElementById("start-btn").click();
+});
+
+// ── CARD DISPLAY ──────────────────────────────────────────────────────────────
+function nextCard() {
+  if (queue.length === 0) {
+    showDone();
+    return;
+  }
+  current = queue.shift();
+  document.getElementById("card-text").textContent = current.text;
+  document.getElementById("topic-badge").textContent = (current.topic || "—").replace(/_/g," ");
+  document.getElementById("meta-topic").textContent  = current.topic || "";
+  document.getElementById("meta-likes").textContent  = current.likes ? `♥ ${current.likes}` : "";
+  document.getElementById("counter").innerHTML = `<span>labeled </span>${labeledCount}`;
+
+  // Reset card position
+  const card = document.getElementById("card");
+  card.style.transition = "none";
+  card.style.transform  = "translateX(0) rotate(0deg)";
+  card.style.opacity    = "1";
+
+  // Reset overlays
+  document.getElementById("hint-pos").style.opacity = "0";
+  document.getElementById("hint-neg").style.opacity = "0";
+  document.getElementById("hint-neu").style.opacity = "0";
+}
+
+function showDone() {
+  current = null;
+  document.getElementById("app").style.display = "none";
+  document.getElementById("done-screen").style.display = "flex";
+}
+
+// ── LABEL ─────────────────────────────────────────────────────────────────────
+function label(sentiment) {
+  if (!current) return;
+
+  const item = current;
+  current = null;
+
+  // Mark as labeled locally
+  labeledIds.add(String(item.id));
+  labeledCount++;
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify([...labeledIds]));
+    localStorage.setItem(STORAGE_COUNT_KEY, String(labeledCount));
+  } catch {}
+
+  document.getElementById("counter").innerHTML = `<span>labeled </span>${labeledCount}`;
+
+  // Animate card out
+  const card = document.getElementById("card");
+  card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
+
+  let tx = 0, rot = 0, emoji = "";
+  if (sentiment === "positive") { tx = 600; rot = 15; emoji = "👍"; }
+  if (sentiment === "negative") { tx = -600; rot = -15; emoji = "👎"; }
+  if (sentiment === "neutral")  { tx = 0; rot = 0; emoji = "😐"; card.style.transform = "translateY(-400px)"; }
+  if (sentiment === "delete")   { tx = 0; rot = 0; emoji = "🗑️"; card.style.transform = "translateY(400px)"; }
+
+  if (sentiment === "positive" || sentiment === "negative") {
+    card.style.transform = `translateX(${tx}px) rotate(${rot}deg)`;
+  }
+  card.style.opacity = "0";
+
+  // Flash feedback
+  flashFeedback(emoji);
+
+  // Send to Google Sheets (fire and forget)
+  if (sentiment !== "delete") {
+    sendToSheet({
+      labeler,
+      tweet_id:  item.id || "",
+      text:      item.text,
+      topic:     item.topic || "",
+      label:     sentiment,
+      timestamp: new Date().toISOString(),
+    });
+  }
+
+  setTimeout(nextCard, 380);
+}
+
+// ── SEND TO SHEET ─────────────────────────────────────────────────────────────
+function sendToSheet(data) {
+  fetch(SHEET_URL, {
+    method:  "POST",
+    mode:    "no-cors",
+    headers: { "Content-Type": "application/json" },
+    body:    JSON.stringify(data),
+  }).catch(console.warn);
+}
+
+// ── FEEDBACK FLASH ────────────────────────────────────────────────────────────
+function flashFeedback(emoji) {
+  const el = document.getElementById("feedback");
+  el.textContent = emoji;
+  el.style.transition = "none";
+  el.style.opacity = "1";
+  requestAnimationFrame(() => {
+    el.style.transition = "opacity 0.5s ease";
+    el.style.opacity = "0";
+  });
+}
+
+// ── TOAST ─────────────────────────────────────────────────────────────────────
+function showToast(msg) {
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(() => t.classList.remove("show"), 2000);
+}
+
+// ── KEYBOARD ──────────────────────────────────────────────────────────────────
+document.addEventListener("keydown", e => {
+  if (!current) return;
+  if (e.key === "ArrowRight") label("positive");
+  if (e.key === "ArrowLeft")  label("negative");
+  if (e.key === "ArrowUp")    label("neutral");
+  if (e.key === " ")          { e.preventDefault(); label("delete"); }
+});
+
+// ── SWIPE / DRAG ──────────────────────────────────────────────────────────────
+let startX = 0, startY = 0, isDragging = false;
+
+const card = document.getElementById("card");
+
+function onStart(x, y) {
+  if (!current) return;
+  startX = x; startY = y;
+  isDragging = true;
+}
+
+function onMove(x, y) {
+  if (!isDragging || !current) return;
+  const dx = x - startX;
+  const dy = y - startY;
+  const rot = dx * 0.08;
+  card.style.transition = "none";
+  card.style.transform  = `translateX(${dx}px) translateY(${dy}px) rotate(${rot}deg)`;
+
+  const threshold = 60;
+  document.getElementById("hint-pos").style.opacity = dx > threshold  ? Math.min((dx - threshold) / 80, 1) : "0";
+  document.getElementById("hint-neg").style.opacity = dx < -threshold ? Math.min((-dx - threshold) / 80, 1) : "0";
+  document.getElementById("hint-neu").style.opacity = dy < -threshold ? Math.min((-dy - threshold) / 80, 1) : "0";
+}
+
+function onEnd(x, y) {
+  if (!isDragging || !current) return;
+  isDragging = false;
+  const dx = x - startX;
+  const dy = y - startY;
+
+  if (dx > 100)       label("positive");
+  else if (dx < -100) label("negative");
+  else if (dy < -100) label("neutral");
+  else {
+    // Snap back
+    card.style.transition = "transform 0.3s ease";
+    card.style.transform  = "translateX(0) rotate(0deg)";
+    document.getElementById("hint-pos").style.opacity = "0";
+    document.getElementById("hint-neg").style.opacity = "0";
+    document.getElementById("hint-neu").style.opacity = "0";
+  }
+}
+
+// Mouse
+card.addEventListener("mousedown",  e => onStart(e.clientX, e.clientY));
+window.addEventListener("mousemove", e => { if (isDragging) onMove(e.clientX, e.clientY); });
+window.addEventListener("mouseup",   e => onEnd(e.clientX, e.clientY));
+
+// Touch
+card.addEventListener("touchstart", e => {
+  const t = e.touches[0];
+  onStart(t.clientX, t.clientY);
+}, { passive: true });
+card.addEventListener("touchmove", e => {
+  e.preventDefault();
+  const t = e.touches[0];
+  onMove(t.clientX, t.clientY);
+}, { passive: false });
+card.addEventListener("touchend", e => {
+  const t = e.changedTouches[0];
+  onEnd(t.clientX, t.clientY);
+});
+
+// Double tap to delete on mobile
+let lastTap = 0;
+card.addEventListener("touchend", () => {
+  const now = Date.now();
+  if (now - lastTap < 300) label("delete");
+  lastTap = now;
+});
+
+// ── BOOT ──────────────────────────────────────────────────────────────────────
+init();
+</script>
+</body>
+</html>
