@@ -725,7 +725,7 @@
     <input class="name-input" id="first-name-input" type="text" placeholder="First name" autocomplete="off" />
     <input class="name-input" id="last-name-input" type="text" placeholder="Last name" autocomplete="off" />
   </div>
-  <button id="start-btn">START LABELING →</button>
+  <button id="start-btn">START TUTORIAL →</button>
 </div>
 
 <!-- Tutorial Screen -->
@@ -1251,167 +1251,6 @@ function stopTimer() {
   clearInterval(timerInterval);
 }
 
-// ── SENTIMENT HIGHLIGHTER ─────────────────────────────────────────────────────
-const SENTIMENT_MARKERS = {
-  positive: [
-    // love / affection
-    "baheb","b7eb","ba7eb","bahebhom","bahebha","bahebbo","bahebak","bahebek",
-    "b7bbek","b7bbo","7abib","7abibi","7abibty","7ob","hob","3ashek","3asha2",
-    "3omry ma hahebaha","3omry ma","rab heta l alby","2amar","ward",
-    // excellence markers
-    "fashkh","fash5","fa45","gamed","gamda","gamed neik","gamil","gameel","gameela",
-    "helw","helwa","7elw","7elwa","7lw","raye2","raye3","ahla","a7la",
-    "neik","niik","insane","insane neik","wow","incredible",
-    "momtaz","momtaza","ta7fa","zo2","zoo2","zakaa2","3azeem","3azeema",
-    // happiness / excitement
-    "fara7","faraheen","mabsout","mabsouta","bsut","bas7a","sa3eed","sa3eeda",
-    "emotional","emotional awy","ha3ayat","adama3","bdm3","3ayat","de7k",
-    "da7k","men el de7k","mesh adra men el de7k","la la mesh adra",
-    "btbstny","ybstnii","btesba7ny","yesbahny",
-    // admiration / praise
-    "3ash","3ash gedan","3ash ya fnan","yestahel","estahel","estahelo",
-    "fekra fe montaha el zakaa2","fekra fe montaha","fe montaha el",
-    "gada3","tayeb","gada3 wa tayeb","mabrook","mabrouk","masha2allah","mashaallah",
-    "katkoot","oksm bellah","wallahi","wallah","wallahii","walahy","walahi",
-    "elhamdolelah","elhamdulillah","hamdella","rabena","rabena ma3ak",
-    "dam","3ando dam","3andoha dam","3ndo dam",
-    // desire / longing
-    "nefsy","3ayez","3ayza","3yza","mesh motkhaila","mesh msd2a",
-    "yedhakny","yefra7ny","btefra7ny","khalany emotional","khalany",
-    "makes me wanna","bykhaliny","5alany",
-    // other strong positives
-    "sa7y raye","positive energy","7ases enny hlem","b3zk","b7bk",
-    "so7ba 7lwa","a7san","afdal","aktar","lazez","lazeez",
-    "bettbsto sawa","mabsouteen","ahla flirts","ra5amet hob",
-    "mafish haga tany","men el donya","blessings","el kheer",
-  ],
-  negative: [
-    // explicit hate / disgust
-    "bakrah","bakra","b2ra","bakrahko","ba2et bakraha","be2rat",
-    "kosom","kos om","kos omm","5ara","khara","araf","el araf",
-    "rezel","rezeel","bashe3","bash3","haga bash3a","mo2refa","mo2ref",
-    "mokazeba","mokazeza","we7sh","wehsh","ta3mo wehesh","ta3m wehesh",
-    "bedan","nas bedan","atfal bedan",
-    // frustration / anger
-    "za3lan","za3lana","za3alt","za3a2t","mede2","meday2","meday2eno",
-    "daya2","deya2","bat2al","3asabt","met3assaba","a3saby taabana",
-    "mesh adra","msh adra","mesh adra astahmel","mesh adra a move on",
-    "mesh 3ayez","msh 3ayza","mesh taye2","msh taye2","maba2etsh tay2a",
-    "ta2eel","te2eel","teel","t2el 3ala alby","3al alby",
-    "hayat","haayat","3omry","msh 3esha","de msh 3esha",
-    // sadness / pain
-    "waga3","waga3 gamed","alby mat","malish nefs","ta3ban","ta3bana",
-    "hozn","fe montaha l hozn","7zen","za3al","nadam","nadama",
-    "baghra2","hases eny baghra2","ha3ayat","adama3",
-    "burnout","anxiety","stress","te3ebt","te3bt",
-    // criticism
-    "ghaby","ghabbiya","ghasheem","kasel","motakasel","ye2ref",
-    "mo2ref","moraf","mozel","saya3","faker nafso","bedan",
-    "mesh mostawa","dah mesh mostawa","la3eeb rakamo",
-    "ebn el","ibn el","ebn el 3abita","ebn el weskha",
-    "msh sa7","msh sa7","ghalt","3'alat",
-    // despair
-    "mesh ra7","mesh ra7 yenfa3","maha2a2sh","ma3ana wala","mesh balha2",
-    "wala 7aga","wala mesh aarfa","mesh fahem haga","maba2etsh fahem",
-    "mesh 3arfa hatgawez","mesh 3arfa hakamel","kefaya","kefayaaa",
-  ],
-  sarcasm: [
-    // classic sarcasm markers
-    "tab3an","tab3n","akeed","akid","ya3ni","ya3ny",
-    "bel zoo2 bel 3afya","bel zoo2","bel zo2 bel 3afya",
-    "ya salam","ya salaaaam","ya salaaaaam",
-    "matfo2o","matfo2o baaa","oksm bellah matfo2o",
-    "mesh da7k","howa eh da","howa eh el","howa bgd",
-    "el mafrood","mafrood","lazem","ya nas",
-    "mesh mesada2","mesh msd2a","mesh msada2",
-    "ezay beyl3ab","ezay bas","ezay btnzlo","ezay fe nas",
-    // irony / mock praise
-    "ahla","ahla e3lan","ahla flirts","wa7ash",
-    "ba7ebak gedan","bahebko gedan",
-    "hwa leh","leh fag2a","leh bgd","leh kol haga",
-    "asl","toz","fel ard","eih ya3ni","ya3ni eh",
-    "bas fain","fain","w ba3deen","w keda eh",
-    // mock disbelief
-    "ezay ezay ezay","mesh msd2a","mesh msada2 begad",
-    "howa valid","mesh 3aref ezay","mashallah 3aleko",
-    "pro keto pro diet","ZERO","meen dah","meen deh",
-  ],
-  negation: [
-    "mesh","msh","ma ","mab","maba","mabqa","wala","wla",
-    "3omry ma","3mrk ma","mafish","ma fish","mafesh",
-    "mesh ba","msh ba","maba2etsh","maba2tsh","mab2tsh",
-    "mesh 3arfa","msh 3arfa","mesh 3aref","msh 3aref",
-    "mesh adra","msh adra","msh 2ader","mesh 2adra",
-    "mesh ayez","msh ayez","mesh 3ayza","msh 3ayza",
-    "la ","laa ","la2","la2a","abadan","khales",
-    "msh hyghyar","mesh ra7","msh ra7","mesh ha","msh ha",
-    "msh mohm","mesh mohm","msh mohem","mesh mohem",
-  ]
-};
-
-function highlightSentiment(text) {
-  // Build a flat map of term → category
-  const termMap = [];
-  for (const [cat, terms] of Object.entries(SENTIMENT_MARKERS)) {
-    for (const term of terms) {
-      termMap.push({ term: term.toLowerCase(), cat });
-    }
-  }
-  // Sort by length desc so longer phrases match first
-  termMap.sort((a, b) => b.term.length - a.term.length);
-
-  const colorMap = {
-    positive: "#ef4444",
-    negative: "#ef4444",
-    sarcasm:  "#ef4444",
-    negation: "#ef4444",
-  };
-
-  // Split text into tokens preserving spaces, apply highlighting
-  let result = text;
-  const lower = text.toLowerCase();
-  const used = new Array(text.length).fill(false);
-  const highlights = []; // {start, end, cat}
-
-  for (const { term, cat } of termMap) {
-    let idx = 0;
-    while ((idx = lower.indexOf(term, idx)) !== -1) {
-      const end = idx + term.length;
-      // Check word boundary (prev/next char is space, start, or end)
-      const prevOk = idx === 0 || /[\s,!?.]/.test(text[idx - 1]);
-      const nextOk = end === text.length || /[\s,!?.]/.test(text[end]);
-      // Check not already used
-      const overlaps = used.slice(idx, end).some(Boolean);
-      if (prevOk && nextOk && !overlaps) {
-        highlights.push({ start: idx, end, cat });
-        for (let i = idx; i < end; i++) used[i] = true;
-      }
-      idx++;
-    }
-  }
-
-  if (highlights.length === 0) return text;
-
-  // Sort by start position
-  highlights.sort((a, b) => a.start - b.start);
-
-  // Build HTML
-  let html = "";
-  let pos = 0;
-  for (const { start, end, cat } of highlights) {
-    html += escapeHtml(text.slice(pos, start));
-    const color = colorMap[cat];
-    html += `<mark style="background:${color}22;color:${color};border-radius:3px;padding:0 2px;font-weight:700;">${escapeHtml(text.slice(start, end))}</mark>`;
-    pos = end;
-  }
-  html += escapeHtml(text.slice(pos));
-  return html;
-}
-
-function escapeHtml(str) {
-  return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
-}
-
 // ── CARD DISPLAY ──────────────────────────────────────────────────────────────
 function nextCard() {
   if (queue.length === 0) {
@@ -1419,8 +1258,7 @@ function nextCard() {
     return;
   }
   current = queue.shift();
-  const cardText = document.getElementById("card-text");
-  cardText.innerHTML = highlightSentiment(current.text);
+  document.getElementById("card-text").textContent = current.text;
   document.getElementById("meta-topic").textContent  = current.topic || "";
   document.getElementById("meta-likes").textContent  = current.likes ? `♥ ${current.likes}` : "";
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
@@ -1539,7 +1377,7 @@ function undoLast() {
   card.style.transition = "none";
   card.style.transform  = "translateX(300px)";
   card.style.opacity    = "0";
-  document.getElementById("card-text").innerHTML = highlightSentiment(item.text);
+  document.getElementById("card-text").textContent = item.text;
   document.getElementById("meta-topic").textContent  = item.topic || "";
   document.getElementById("meta-likes").textContent  = item.likes ? `♥ ${item.likes}` : "";
 
