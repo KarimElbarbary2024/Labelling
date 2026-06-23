@@ -71,9 +71,7 @@
     text-align: center;
   }
 
-  #name-screen .name-rule strong {
-    color: var(--text);
-  }
+  #name-screen .name-rule strong { color: var(--text); }
 
   .name-inputs-row {
     display: flex;
@@ -207,10 +205,9 @@
   .t-btn-neu  { background: var(--neu-dim); color: var(--neu); }
   .t-btn-del  { background: rgba(245,158,11,0.12); color: #f59e0b; }
 
-  .t-btn .btn-icon { font-size: 1.4rem; }
+  .t-btn .btn-icon  { font-size: 1.4rem; }
   .t-btn .btn-label { font-size: 0.6rem; opacity: 0.7; }
 
-  /* Tutorial feedback overlay */
   #tutorial-feedback {
     display: none;
     width: 100%;
@@ -283,7 +280,6 @@
   }
   #counter span { color: var(--muted); font-weight: 400; font-size: 0.7rem; }
 
-  /* Timer */
   #timer {
     font-size: 1.1rem;
     font-weight: 700;
@@ -301,7 +297,6 @@
     to   { opacity: 0.5; }
   }
 
-  /* Leaderboard toggle */
   #lb-btn {
     background: none;
     border: 1px solid var(--border);
@@ -316,17 +311,6 @@
     transition: border-color 0.2s, color 0.2s;
   }
   #lb-btn:hover { border-color: var(--text); color: var(--text); }
-
-  #topic-badge {
-    font-size: 0.6rem;
-    padding: 3px 8px;
-    border-radius: 100px;
-    border: 1px solid var(--border);
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    flex-shrink: 0;
-  }
 
   /* ── LEADERBOARD PANEL ── */
   #lb-panel {
@@ -373,12 +357,7 @@
     border: 1px solid var(--border);
   }
 
-  .lb-rank {
-    font-size: 0.7rem;
-    color: var(--muted);
-    min-width: 20px;
-    text-align: right;
-  }
+  .lb-rank { font-size: 0.7rem; color: var(--muted); min-width: 20px; text-align: right; }
   .lb-rank.gold   { color: #fbbf24; }
   .lb-rank.silver { color: #94a3b8; }
   .lb-rank.bronze { color: #b45309; }
@@ -393,32 +372,14 @@
   }
   .lb-name.me { color: var(--pos); }
 
-  .lb-count {
-    font-size: 0.7rem;
-    color: var(--muted);
-  }
+  .lb-count { font-size: 0.7rem; color: var(--muted); }
 
-  .lb-bar-wrap {
-    width: 100%;
-    height: 2px;
-    background: var(--border);
-    border-radius: 1px;
-    margin-top: 4px;
-  }
-  .lb-bar {
-    height: 2px;
-    border-radius: 1px;
-    background: var(--pos);
-    transition: width 0.5s ease;
-  }
-  .lb-bar.me { background: var(--pos); }
+  .lb-bar-wrap { width: 100%; height: 2px; background: var(--border); border-radius: 1px; margin-top: 4px; }
+  .lb-bar { height: 2px; border-radius: 1px; background: var(--pos); transition: width 0.5s ease; }
+  .lb-bar.me    { background: var(--pos); }
   .lb-bar.other { background: var(--muted); }
 
-  #lb-last-updated {
-    font-size: 0.6rem;
-    color: var(--muted);
-    text-align: center;
-  }
+  #lb-last-updated { font-size: 0.6rem; color: var(--muted); text-align: center; }
 
   /* ── CARD AREA ── */
   #card-area {
@@ -445,6 +406,7 @@
     will-change: transform;
   }
   #card:active { cursor: grabbing; }
+  #card.edit-mode { cursor: default; }
 
   #card-text {
     font-family: 'Cairo', sans-serif;
@@ -459,6 +421,94 @@
     justify-content: center;
   }
 
+  /* ── EDIT MODE ── */
+  #card-edit-area {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #card-edit-label {
+    font-size: 0.6rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  #card-textarea {
+    font-family: 'Cairo', sans-serif;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    line-height: 1.7;
+    font-weight: 600;
+    text-align: center;
+    word-break: break-word;
+    background: var(--bg);
+    border: 1px solid rgba(59,130,246,0.5);
+    border-radius: 10px;
+    color: var(--text);
+    padding: 12px 14px;
+    resize: none;
+    outline: none;
+    width: 100%;
+    min-height: 100px;
+    transition: border-color 0.2s;
+  }
+  #card-textarea:focus { border-color: var(--neu); }
+
+  #edit-confirm-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  #edit-confirm-btn {
+    padding: 10px 24px;
+    background: var(--neu-dim);
+    border: 1px solid rgba(59,130,246,0.4);
+    border-radius: 8px;
+    color: var(--neu);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.2s, opacity 0.2s;
+  }
+  #edit-confirm-btn:hover { background: rgba(59,130,246,0.25); }
+
+  #edit-cancel-btn {
+    padding: 10px 18px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+  }
+  #edit-cancel-btn:hover { border-color: var(--muted); color: var(--text); }
+
+  /* edit badge on card */
+  #edit-badge {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 0.55rem;
+    padding: 3px 8px;
+    border-radius: 100px;
+    background: rgba(59,130,246,0.15);
+    border: 1px solid rgba(59,130,246,0.3);
+    color: var(--neu);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+
   #card-meta {
     margin-top: 16px;
     display: flex;
@@ -469,7 +519,6 @@
     letter-spacing: 0.05em;
   }
 
-  /* Swipe hint overlays */
   #hint-pos, #hint-neg, #hint-neu {
     position: absolute;
     inset: 0;
@@ -499,7 +548,7 @@
     z-index: 50;
   }
 
-  /* ── CONTROLS BAR — always visible ── */
+  /* ── CONTROLS BAR ── */
   #controls-bar {
     padding: 8px 16px;
     border-top: 1px solid var(--border);
@@ -520,18 +569,9 @@
     background: var(--surface);
   }
 
-  .ctrl-icon { font-size: 1.1rem; }
-  .ctrl-direction {
-    font-size: 0.55rem;
-    color: var(--muted);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .ctrl-label {
-    font-size: 0.6rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-  }
+  .ctrl-icon      { font-size: 1.1rem; }
+  .ctrl-direction { font-size: 0.55rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
+  .ctrl-label     { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.04em; }
 
   .ctrl-pos .ctrl-label { color: var(--pos); }
   .ctrl-neg .ctrl-label { color: var(--neg); }
@@ -542,7 +582,7 @@
   .ctrl-neu { border-color: rgba(59,130,246,0.2); }
   .ctrl-del { border-color: rgba(245,158,11,0.2); }
 
-  /* ── ACTION BUTTONS (mobile tap) ── */
+  /* ── ACTION BUTTONS (mobile) ── */
   #action-btns {
     display: none;
     padding: 0 16px 12px;
@@ -564,10 +604,10 @@
   }
   .action-btn:active { transform: scale(0.93); }
 
-  #btn-neg  { background: var(--neg-dim); }
-  #btn-neu  { background: var(--neu-dim); }
-  #btn-pos  { background: var(--pos-dim); }
-  #btn-del  { background: rgba(245,158,11,0.12); }
+  #btn-neg { background: var(--neg-dim); }
+  #btn-neu { background: var(--neu-dim); }
+  #btn-pos { background: var(--pos-dim); }
+  #btn-del { background: rgba(245,158,11,0.12); }
 
   /* ── DONE SCREEN ── */
   #done-screen {
@@ -617,25 +657,25 @@
     transform: translateX(-50%) translateY(0);
   }
 
-  /* ── UNDO / SKIP ROW ── */
+  /* ── UTILITY ROW (undo / edit / skip) ── */
   #utility-row {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
     padding: 4px 16px 12px;
     flex-shrink: 0;
   }
 
   .util-btn {
     flex: 1;
-    max-width: 160px;
+    max-width: 140px;
     padding: 12px 0;
     border-radius: 12px;
     border: 1.5px solid var(--border);
     background: var(--surface);
     color: var(--text);
     font-family: 'Space Mono', monospace;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.05em;
     cursor: pointer;
@@ -643,13 +683,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 7px;
+    gap: 6px;
   }
   .util-btn:active { transform: scale(0.96); }
   #undo-btn { border-color: rgba(59,130,246,0.4); color: var(--neu); }
   #undo-btn:hover:not(:disabled) { background: rgba(59,130,246,0.1); border-color: var(--neu); }
-  #skip-btn { border-color: rgba(245,158,11,0.4); color: #f59e0b; }
-  #skip-btn:hover { background: rgba(245,158,11,0.1); border-color: #f59e0b; }
+  #edit-btn { border-color: rgba(245,158,11,0.4); color: #f59e0b; }
+  #edit-btn:hover:not(:disabled) { background: rgba(245,158,11,0.1); border-color: #f59e0b; }
+  #edit-btn.active { background: rgba(245,158,11,0.15); border-color: #f59e0b; }
+  #skip-btn { border-color: rgba(255,255,255,0.1); color: var(--muted); }
+  #skip-btn:hover { background: rgba(255,255,255,0.04); border-color: var(--muted); }
   .util-btn:disabled { opacity: 0.25; cursor: default; }
   .util-btn:disabled:hover { background: var(--surface); }
 
@@ -676,9 +719,7 @@
     white-space: nowrap;
     transition: none;
   }
-  #label-reveal.pop {
-    animation: labelPop 0.9s ease forwards;
-  }
+  #label-reveal.pop { animation: labelPop 0.9s ease forwards; }
   @keyframes labelPop {
     0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
     18%  { opacity: 1; transform: translate(-50%, -50%) scale(1.08); }
@@ -691,8 +732,8 @@
   #label-reveal.rv-neutral  { border-color: var(--neu); color: var(--neu); }
   #label-reveal.rv-delete   { border-color: #f59e0b;    color: #f59e0b; }
   #label-reveal.rv-skip     { border-color: var(--muted); color: var(--muted); }
+  #label-reveal.rv-edited   { border-color: #f59e0b;    color: #f59e0b; }
 
-  /* Mobile show action buttons */
   @media (hover: none) and (pointer: coarse) {
     #action-btns { display: flex; }
   }
@@ -700,27 +741,23 @@
 </head>
 <body>
 
-<!-- Loading -->
 <div id="loading">LOADING...</div>
 
 <!-- Name Screen -->
 <div id="name-screen">
   <h1>Label It 🏷️</h1>
-
   <div class="subtitle">
     You're helping me with something I care about a lot.<br>
     Each comment needs a label based on its overall vibe: <strong style="color:var(--pos)">positive</strong>, <strong style="color:var(--neg)">negative</strong>, <strong style="color:var(--neu)">neutral</strong>, or <strong style="color:#f59e0b">delete</strong> if it's not Franco.<br><br>
     <span style="color:var(--text);opacity:0.8">⚡ I care about quantity over quality — don't overthink it.<br>
     🟢 Under 10s = ideal · 🟡 10–20s = fine · 🔴 Over 20s = just skip it</span>
   </div>
-
   <div class="name-rule">
     📝 Enter your <strong>first name</strong> and <strong>last name</strong><br>
     ⚠️ Use the <strong>exact same spelling</strong> every time you come back<br>
     so your score is saved correctly.<br>
     <span style="font-size:0.6rem;opacity:0.6">(Capital letters don't matter — KARIM = karim)</span>
   </div>
-
   <div class="name-inputs-row">
     <input class="name-input" id="first-name-input" type="text" placeholder="First name" autocomplete="off" />
     <input class="name-input" id="last-name-input" type="text" placeholder="Last name" autocomplete="off" />
@@ -732,44 +769,31 @@
 <div id="tutorial-screen">
   <div id="tutorial-progress">TUTORIAL — STEP <span id="t-step">1</span> OF <span id="t-total">13</span></div>
   <div id="tutorial-badge" class="badge-easy">EASY POSITIVE</div>
-
   <div id="tutorial-card">
     <div id="tutorial-tweet"></div>
     <div id="tutorial-question">What is the sentiment of this tweet?</div>
   </div>
-
   <div id="tutorial-feedback"></div>
-
   <div id="tutorial-btns">
     <button class="t-btn t-btn-neg" onclick="tutorialAnswer('negative')">
-      <span class="btn-icon">👎</span>
-      <span>NEGATIVE</span>
-      <span class="btn-label">← left</span>
+      <span class="btn-icon">👎</span><span>NEGATIVE</span><span class="btn-label">← left</span>
     </button>
     <button class="t-btn t-btn-neu" onclick="tutorialAnswer('neutral')">
-      <span class="btn-icon">🤷</span>
-      <span>NEUTRAL</span>
-      <span class="btn-label">↑ up</span>
+      <span class="btn-icon">🤷</span><span>NEUTRAL</span><span class="btn-label">↑ up</span>
     </button>
     <button class="t-btn t-btn-pos" onclick="tutorialAnswer('positive')">
-      <span class="btn-icon">👍</span>
-      <span>POSITIVE</span>
-      <span class="btn-label">→ right</span>
+      <span class="btn-icon">👍</span><span>POSITIVE</span><span class="btn-label">→ right</span>
     </button>
     <button class="t-btn t-btn-del" onclick="tutorialAnswer('delete')">
-      <span class="btn-icon">🗑️</span>
-      <span>DELETE</span>
-      <span class="btn-label">↓ down</span>
+      <span class="btn-icon">🗑️</span><span>DELETE</span><span class="btn-label">↓ down</span>
     </button>
   </div>
-
   <button id="tutorial-next-btn" onclick="tutorialNext()">NEXT →</button>
 </div>
 
 <!-- Main App -->
 <div id="app">
 
-  <!-- Header -->
   <div id="header">
     <div id="labeler-name">—</div>
     <div id="header-center">
@@ -779,22 +803,31 @@
     <button id="lb-btn" onclick="toggleLeaderboard()">🏆 RACE</button>
   </div>
 
-  <!-- Leaderboard Panel -->
   <div id="lb-panel">
-    <h3>
-      🏆 LEADERBOARD
-      <button id="lb-close" onclick="toggleLeaderboard()">✕</button>
-    </h3>
-    <div id="lb-rows">
-      <div style="font-size:0.7rem;color:var(--muted);text-align:center;padding:20px">Loading scores...</div>
-    </div>
+    <h3>🏆 LEADERBOARD <button id="lb-close" onclick="toggleLeaderboard()">✕</button></h3>
+    <div id="lb-rows"><div style="font-size:0.7rem;color:var(--muted);text-align:center;padding:20px">Loading scores...</div></div>
     <div id="lb-last-updated"></div>
   </div>
 
-  <!-- Card Area -->
   <div id="card-area">
     <div id="card">
+
+      <!-- Normal display -->
       <div id="card-text">—</div>
+
+      <!-- Edit mode -->
+      <div id="card-edit-area">
+        <div id="card-edit-label">✏️ EDITING — fix the text then label as normal</div>
+        <textarea id="card-textarea" rows="4" spellcheck="false"></textarea>
+        <div id="edit-confirm-row">
+          <button id="edit-confirm-btn" onclick="confirmEdit()">✓ DONE EDITING</button>
+          <button id="edit-cancel-btn" onclick="cancelEdit()">✕ CANCEL</button>
+        </div>
+      </div>
+
+      <!-- Edited badge (shown after confirming edit, while still on the card) -->
+      <div id="edit-badge">✏️ EDITED</div>
+
       <div id="card-meta">
         <span id="meta-topic"></span>
         <span id="meta-likes"></span>
@@ -805,7 +838,6 @@
     </div>
   </div>
 
-  <!-- Controls bar — always visible -->
   <div id="controls-bar">
     <div class="ctrl-item ctrl-neg">
       <div class="ctrl-icon">👎</div>
@@ -829,43 +861,37 @@
     </div>
   </div>
 
-  <!-- Action buttons (mobile) -->
   <div id="action-btns">
-    <button class="action-btn" id="btn-neg"  onclick="label('negative')">👎</button>
-    <button class="action-btn" id="btn-neu"  onclick="label('neutral')">🤷</button>
-    <button class="action-btn" id="btn-pos"  onclick="label('positive')">👍</button>
-    <button class="action-btn" id="btn-del"  onclick="label('delete')">🗑️</button>
+    <button class="action-btn" id="btn-neg" onclick="label('negative')">👎</button>
+    <button class="action-btn" id="btn-neu" onclick="label('neutral')">🤷</button>
+    <button class="action-btn" id="btn-pos" onclick="label('positive')">👍</button>
+    <button class="action-btn" id="btn-del" onclick="label('delete')">🗑️</button>
   </div>
 
-  <!-- Undo / Skip row -->
   <div id="utility-row">
-    <button class="util-btn" id="undo-btn" onclick="undoLast()" disabled>↩ UNDO <span style="font-size:0.55rem;opacity:0.6">[Z]</span></button>
-    <button class="util-btn" id="skip-btn" onclick="skipCard()">⏭ SKIP <span style="font-size:0.55rem;opacity:0.6">[SPACE]</span></button>
+    <button class="util-btn" id="undo-btn" onclick="undoLast()" disabled>↩ UNDO <span style="font-size:0.5rem;opacity:0.6">[Z]</span></button>
+    <button class="util-btn" id="edit-btn" onclick="toggleEdit()">✏️ EDIT <span style="font-size:0.5rem;opacity:0.6">[E]</span></button>
+    <button class="util-btn" id="skip-btn" onclick="skipCard()">⏭ SKIP <span style="font-size:0.5rem;opacity:0.6">[SPC]</span></button>
   </div>
 
 </div>
 
-<!-- Label reveal banner -->
 <div id="label-reveal"></div>
 
-<!-- Done Screen -->
 <div id="done-screen">
   <div style="font-size:3rem">🎉</div>
   <h2>All done!</h2>
   <p>No more unlabeled comments right now.<br>Check back later as more are added.</p>
 </div>
 
-<!-- Feedback flash -->
 <div id="feedback"></div>
-
-<!-- Toast -->
 <div id="toast"></div>
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbxB2WelK_trMgFri0KKjkzHSQsTnSyn69QD1bRDEL_8xhLV7MxueIrv_0in6xQFIX32/exec";
-const JSON_URL  = "https://karimelbarbary2024.github.io/Labelling/twitter_v11_30words.json";
-const POLL_MS   = 60_000;
+const JSON_URL  = "https://karimelbarbary2024.github.io/Labelling/new_approach_30words.json";
+const POLL_MS    = 60_000;
 const LB_POLL_MS = 30_000;
 const STORAGE_KEY       = "arabizi_labeled_ids";
 const STORAGE_COUNT_KEY = "arabizi_labeled_count";
@@ -873,199 +899,46 @@ const STORAGE_NAME_KEY  = "arabizi_labeler_name";
 
 // ── TUTORIAL STEPS ────────────────────────────────────────────────────────────
 const TUTORIAL_STEPS = [
-  // ── EASY POSITIVE ──
-  {
-    difficulty: "EASY POSITIVE",
-    badgeClass: "badge-easy",
-    tweet: "baheb messi awy ya ged3an mesh keda",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is saying they love Messi. \"Baheb\" means \"I love\" — love is a positive feeling. Easy!"
-  },
-  {
-    difficulty: "EASY POSITIVE",
-    badgeClass: "badge-easy",
-    tweet: "3ash montakhab masr",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is saying \"Long live Egypt's national team!\" They are expressing pride — pride is a positive feeling."
-  },
-
-  // ── MEDIUM POSITIVE ──
-  {
-    difficulty: "MEDIUM POSITIVE",
-    badgeClass: "badge-medium",
-    tweet: "3amatan 3ayez ahdarlo hafla",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is saying they want to attend the singer's concert. You only attend concerts of people you like — the hidden feeling is love, which is positive."
-  },
-  {
-    difficulty: "MEDIUM POSITIVE",
-    badgeClass: "badge-medium",
-    tweet: "ana mesh fahemko el saraha bas 3ash estamero",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. \"Estamero\" means \"keep going.\" The person is being supportive and encouraging — support is a positive feeling."
-  },
-  {
-    difficulty: "MEDIUM POSITIVE",
-    badgeClass: "badge-medium",
-    tweet: "mesh ba7eb tielemans mn faragh",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is saying they don't dislike Tielemans for no reason — meaning they have many reasons to LOVE him. The double negative reveals genuine admiration."
-  },
-
-  // ── HARD POSITIVE ──
-  {
-    difficulty: "HARD POSITIVE",
-    badgeClass: "badge-hard",
-    tweet: "Gama3a mesh 3aref agebhalko ezay bas bsaraha keda men gher laf w dawaran ramadan f masr haga tanya begad ba2a",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is saying that Ramadan in Egypt is something else — they are expressing wonder and love for the experience. The feeling is joy and belonging."
-  },
-  {
-    difficulty: "HARD POSITIVE",
-    badgeClass: "badge-hard",
-    tweet: "ana nefsy anzel el ba7r w atla3 feseekh w ahbes be ahwa",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is expressing a strong desire for things they love — the beach, feseekh, and coffee. Craving something you love is a positive feeling."
-  },
-  {
-    difficulty: "HARD POSITIVE",
-    badgeClass: "badge-hard",
-    tweet: "ana we ba3deen ba2a fel film elly yekhaly el wahed y3ayat dah",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person is saying the movie made them want to cry — but in Egyptian culture this means the movie was SO GOOD it touched them deeply. This is admiration, not sadness."
-  },
-  {
-    difficulty: "HARD POSITIVE",
-    badgeClass: "badge-hard",
-    tweet: "3ala ad mana 3ayza farahy yekoon classic awy 3ala ad mana 3ayza ageeb wegz w peggy gou",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person wants Wegz and Peggy Gou at their wedding. Wanting your favorite artists at the most important day of your life is pure love and excitement — very positive!"
-  },
-  {
-    difficulty: "HARD POSITIVE",
-    badgeClass: "badge-hard",
-    tweet: "ma3rfsh amira beta3et el ragel dah makntsh 3agbany ezay awl ma nezlt",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE. The person can't believe they once didn't like this artist — now they clearly love them. The feeling underneath is admiration and appreciation."
-  },
-
-  // ── EASY NEGATIVE ──
-  {
-    difficulty: "EASY NEGATIVE",
-    badgeClass: "badge-easy",
-    tweet: "ana begad bakrah el ragel dah",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE. \"Bakrah\" means \"I hate\" — hate is clearly a negative feeling. No hidden meaning here."
-  },
-  {
-    difficulty: "EASY NEGATIVE",
-    badgeClass: "badge-easy",
-    tweet: "el moghany dah el mafrood ye3tezel",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE. The person is saying this singer should retire. This is clear criticism — a negative sentiment."
-  },
-
-  // ── MEDIUM NEGATIVE ──
-  {
-    difficulty: "MEDIUM NEGATIVE",
-    badgeClass: "badge-medium",
-    tweet: "twitter kolo b2a 3n wegz dah",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE. The person is frustrated that their entire Twitter feed is now about Wegz. Frustration and annoyance are negative feelings."
-  },
-  {
-    difficulty: "MEDIUM NEGATIVE",
-    badgeClass: "badge-medium",
-    tweet: "howa el wa7ed el mafrood yekoon be osa 3ashan el 7okam ye3arasoolo",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE. The person is being SARCASTIC — saying sarcastically that you need to be a referee's friend to get fair calls. Sarcasm expressing injustice = negative."
-  },
-  {
-    difficulty: "MEDIUM NEGATIVE",
-    badgeClass: "badge-medium",
-    tweet: "mesh mesada2 en el ahly ba2a 3ando mohagem 3amatan",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE. The person is sarcastically expressing disbelief that their club FINALLY has a striker — the sarcasm reveals frustration and years of disappointment."
-  },
-
-  // ── HARD NEGATIVE ──
-  {
-    difficulty: "HARD NEGATIVE",
-    badgeClass: "badge-hard",
-    tweet: "mesh 3arfa a2ool le ahly eny 3amalt hadsa ezay",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE. The person is scared to tell their parents about a car crash. Fear and dread are strongly negative feelings — even though no negative word is explicitly used."
-  },
-  {
-    difficulty: "HARD NEGATIVE",
-    badgeClass: "badge-hard",
-    tweet: "Ba7eb el nas ely 3ayzani adkhol Seyasa w Eqtesad 3ashan ana gayba magmoo3ha bas w mesh mohem ana 3ayza eh",
-    answer: "negative",
-    explanation: "✅ This is NEGATIVE — sarcasm. The person is sarcastically saying they \"love\" people who push them toward a major just because of grades, ignoring what they actually want. The real feeling is frustration and resentment."
-  },
-
-  // ── NEUTRAL ──
-  {
-    difficulty: "NEUTRAL",
-    badgeClass: "badge-neutral",
-    tweet: "ya gama3a had rayeh haflet wegz",
-    answer: "neutral",
-    explanation: "🤷 This is NEUTRAL. The person is just asking a question — \"is anyone going to the Wegz concert?\" There is no feeling expressed, just information. Ask yourself: if someone said this to you, would you immediately know if they are happy or sad? No — so it's neutral."
-  },
-  {
-    difficulty: "NEUTRAL",
-    badgeClass: "badge-neutral",
-    tweet: "ah el 5etab 2allab 18+ ya ged3an...bent ta7t el kobry 3ndha 10 years maska tefl...dah saya3 gedan",
-    answer: "neutral",
-    explanation: "🤷 This is NEUTRAL. The person is just telling a story — describing something they saw. There is no expressed positive or negative feeling about a person or thing. Ask yourself: would you immediately know if they are happy or sad? No — it's an observation."
-  },
-  {
-    difficulty: "NEUTRAL",
-    badgeClass: "badge-neutral",
-    tweet: "Kemeyet el nas el mabtkalmsh b3daha delwa2ty besabab el seyasa keteer gedan",
-    answer: "neutral",
-    explanation: "🤷 This is NEUTRAL. The person is stating a fact — that many people have stopped talking to each other because of politics. They are not expressing their own opinion or feeling about it. It's a neutral observation."
-  },
-
-  // ── DELETE — NOT FRANCO ──
-  {
-    difficulty: "DELETE — NOT FRANCO",
-    badgeClass: "badge-delete",
-    tweet: "haida el moghany ma ra7 yekoon tayeb",
-    answer: "delete",
-    explanation: "🗑️ DELETE. This comment is Lebanese dialect, not Egyptian Franco/Arabizi. We only label Egyptian Franco. If a comment contains no Franco at all — whether it's a different Arabic dialect written in Latin letters, or full Arabic script — DELETE it. This is the main reason to delete."
-  },
-  {
-    difficulty: "DELETE — NOT FRANCO",
-    badgeClass: "badge-delete",
-    tweet: "هذا التعليق مكتوب بالعربي فقط",
-    answer: "delete",
-    explanation: "🗑️ DELETE. This comment is written entirely in Arabic script — not in Franco/Arabizi (Latin letters). DELETE is only for comments with no Franco at all. This is very rare — most comments will have at least some Franco."
-  },
-
-  // ── DO NOT DELETE — MIXED IS FINE ──
-  {
-    difficulty: "DO NOT DELETE — MIXED IS FINE",
-    badgeClass: "badge-neutral",
-    tweet: "ana begad I love wegz so much",
-    answer: "positive",
-    explanation: "✅ This is POSITIVE — and do NOT delete it! Even though it contains English words (\"I love\"), it also contains Franco words (\"ana begad\"). Any comment that has Franco in it stays — mixed comments are fine. DELETE is only for comments with zero Franco at all."
-  },
+  { difficulty:"EASY POSITIVE",   badgeClass:"badge-easy",    tweet:"baheb messi awy ya ged3an mesh keda",          answer:"positive", explanation:"✅ This is POSITIVE. The person is saying they love Messi. \"Baheb\" means \"I love\" — love is a positive feeling. Easy!" },
+  { difficulty:"EASY POSITIVE",   badgeClass:"badge-easy",    tweet:"3ash montakhab masr",                          answer:"positive", explanation:"✅ This is POSITIVE. The person is saying \"Long live Egypt's national team!\" They are expressing pride — pride is a positive feeling." },
+  { difficulty:"MEDIUM POSITIVE", badgeClass:"badge-medium",  tweet:"3amatan 3ayez ahdarlo hafla",                  answer:"positive", explanation:"✅ This is POSITIVE. The person is saying they want to attend the singer's concert. You only attend concerts of people you like — the hidden feeling is love, which is positive." },
+  { difficulty:"MEDIUM POSITIVE", badgeClass:"badge-medium",  tweet:"ana mesh fahemko el saraha bas 3ash estamero", answer:"positive", explanation:"✅ This is POSITIVE. \"Estamero\" means \"keep going.\" The person is being supportive and encouraging — support is a positive feeling." },
+  { difficulty:"MEDIUM POSITIVE", badgeClass:"badge-medium",  tweet:"mesh ba7eb tielemans mn faragh",               answer:"positive", explanation:"✅ This is POSITIVE. The person is saying they don't dislike Tielemans for no reason — meaning they have many reasons to LOVE him. The double negative reveals genuine admiration." },
+  { difficulty:"HARD POSITIVE",   badgeClass:"badge-hard",    tweet:"Gama3a mesh 3aref agebhalko ezay bas bsaraha keda men gher laf w dawaran ramadan f masr haga tanya begad ba2a", answer:"positive", explanation:"✅ This is POSITIVE. The person is saying that Ramadan in Egypt is something else — they are expressing wonder and love for the experience. The feeling is joy and belonging." },
+  { difficulty:"HARD POSITIVE",   badgeClass:"badge-hard",    tweet:"ana nefsy anzel el ba7r w atla3 feseekh w ahbes be ahwa", answer:"positive", explanation:"✅ This is POSITIVE. The person is expressing a strong desire for things they love — the beach, feseekh, and coffee. Craving something you love is a positive feeling." },
+  { difficulty:"HARD POSITIVE",   badgeClass:"badge-hard",    tweet:"ana we ba3deen ba2a fel film elly yekhaly el wahed y3ayat dah", answer:"positive", explanation:"✅ This is POSITIVE. The person is saying the movie made them want to cry — but in Egyptian culture this means the movie was SO GOOD it touched them deeply. This is admiration, not sadness." },
+  { difficulty:"HARD POSITIVE",   badgeClass:"badge-hard",    tweet:"3ala ad mana 3ayza farahy yekoon classic awy 3ala ad mana 3ayza ageeb wegz w peggy gou", answer:"positive", explanation:"✅ This is POSITIVE. The person wants Wegz and Peggy Gou at their wedding. Wanting your favorite artists at the most important day of your life is pure love and excitement — very positive!" },
+  { difficulty:"HARD POSITIVE",   badgeClass:"badge-hard",    tweet:"ma3rfsh amira beta3et el ragel dah makntsh 3agbany ezay awl ma nezlt", answer:"positive", explanation:"✅ This is POSITIVE. The person can't believe they once didn't like this artist — now they clearly love them. The feeling underneath is admiration and appreciation." },
+  { difficulty:"EASY NEGATIVE",   badgeClass:"badge-easy",    tweet:"ana begad bakrah el ragel dah",                answer:"negative", explanation:"✅ This is NEGATIVE. \"Bakrah\" means \"I hate\" — hate is clearly a negative feeling. No hidden meaning here." },
+  { difficulty:"EASY NEGATIVE",   badgeClass:"badge-easy",    tweet:"el moghany dah el mafrood ye3tezel",           answer:"negative", explanation:"✅ This is NEGATIVE. The person is saying this singer should retire. This is clear criticism — a negative sentiment." },
+  { difficulty:"MEDIUM NEGATIVE", badgeClass:"badge-medium",  tweet:"twitter kolo b2a 3n wegz dah",                answer:"negative", explanation:"✅ This is NEGATIVE. The person is frustrated that their entire Twitter feed is now about Wegz. Frustration and annoyance are negative feelings." },
+  { difficulty:"MEDIUM NEGATIVE", badgeClass:"badge-medium",  tweet:"howa el wa7ed el mafrood yekoon be osa 3ashan el 7okam ye3arasoolo", answer:"negative", explanation:"✅ This is NEGATIVE. The person is being SARCASTIC — saying sarcastically that you need to be a referee's friend to get fair calls. Sarcasm expressing injustice = negative." },
+  { difficulty:"MEDIUM NEGATIVE", badgeClass:"badge-medium",  tweet:"mesh mesada2 en el ahly ba2a 3ando mohagem 3amatan", answer:"negative", explanation:"✅ This is NEGATIVE. The person is sarcastically expressing disbelief that their club FINALLY has a striker — the sarcasm reveals frustration and years of disappointment." },
+  { difficulty:"HARD NEGATIVE",   badgeClass:"badge-hard",    tweet:"mesh 3arfa a2ool le ahly eny 3amalt hadsa ezay", answer:"negative", explanation:"✅ This is NEGATIVE. The person is scared to tell their parents about a car crash. Fear and dread are strongly negative feelings — even though no negative word is explicitly used." },
+  { difficulty:"HARD NEGATIVE",   badgeClass:"badge-hard",    tweet:"Ba7eb el nas ely 3ayzani adkhol Seyasa w Eqtesad 3ashan ana gayba magmoo3ha bas w mesh mohem ana 3ayza eh", answer:"negative", explanation:"✅ This is NEGATIVE — sarcasm. The person is sarcastically saying they \"love\" people who push them toward a major just because of grades, ignoring what they actually want. The real feeling is frustration and resentment." },
+  { difficulty:"NEUTRAL",         badgeClass:"badge-neutral", tweet:"ya gama3a had rayeh haflet wegz",               answer:"neutral",  explanation:"🤷 This is NEUTRAL. The person is just asking a question — \"is anyone going to the Wegz concert?\" There is no feeling expressed, just information." },
+  { difficulty:"NEUTRAL",         badgeClass:"badge-neutral", tweet:"ah el 5etab 2allab 18+ ya ged3an...bent ta7t el kobry 3ndha 10 years maska tefl...dah saya3 gedan", answer:"neutral", explanation:"🤷 This is NEUTRAL. The person is just telling a story — describing something they saw. There is no expressed positive or negative feeling about a person or thing." },
+  { difficulty:"NEUTRAL",         badgeClass:"badge-neutral", tweet:"Kemeyet el nas el mabtkalmsh b3daha delwa2ty besabab el seyasa keteer gedan", answer:"neutral", explanation:"🤷 This is NEUTRAL. The person is stating a fact — that many people have stopped talking to each other because of politics. They are not expressing their own opinion or feeling about it." },
+  { difficulty:"DELETE — NOT FRANCO", badgeClass:"badge-delete", tweet:"haida el moghany ma ra7 yekoon tayeb", answer:"delete", explanation:"🗑️ DELETE. This comment is Lebanese dialect, not Egyptian Franco/Arabizi. We only label Egyptian Franco. If a comment contains no Franco at all — whether it's a different Arabic dialect, or full Arabic script — DELETE it." },
+  { difficulty:"DELETE — NOT FRANCO", badgeClass:"badge-delete", tweet:"هذا التعليق مكتوب بالعربي فقط", answer:"delete", explanation:"🗑️ DELETE. This comment is written entirely in Arabic script — not in Franco/Arabizi. DELETE is only for comments with no Franco at all." },
+  { difficulty:"DO NOT DELETE — MIXED IS FINE", badgeClass:"badge-neutral", tweet:"ana begad I love wegz so much", answer:"positive", explanation:"✅ This is POSITIVE — and do NOT delete it! Even though it contains English words, it also contains Franco words (\"ana begad\"). Any comment that has Franco in it stays — mixed comments are fine." },
 ];
 
 // ── STATE ─────────────────────────────────────────────────────────────────────
-let labeler       = "";
-let allComments   = [];
-let queue         = [];
-let current       = null;
-let labeledCount  = 0;
-let labeledIds    = new Set();
+let labeler      = "";
+let allComments  = [];
+let queue        = [];
+let current      = null;
+let labeledCount = 0;
+let labeledIds   = new Set();
+let undoStack    = [];
 
 let tutorialIndex = 0;
 let tutorialWaitingForNext = false;
 
-// Undo history — stores last labeled item
-let undoStack = []; // [{item, sentiment}]
+// Edit state
+let isEditMode   = false;
+let editedText   = null; // null = no edit this card, string = user edited
 
 // Timer
 let timerInterval = null;
@@ -1081,7 +954,7 @@ async function init() {
 
   await loadComments();
 
-  document.getElementById("loading").style.display  = "none";
+  document.getElementById("loading").style.display    = "none";
   document.getElementById("name-screen").style.display = "flex";
 
   setInterval(async () => {
@@ -1112,13 +985,10 @@ document.getElementById("start-btn").addEventListener("click", () => {
   const first = document.getElementById("first-name-input").value.trim();
   const last  = document.getElementById("last-name-input").value.trim();
   if (!first || !last) { showToast("Please enter your first and last name!"); return; }
-  labeler = (first + " " + last).toLowerCase(); // normalize to lowercase
-
-  // Save name
+  labeler = (first + " " + last).toLowerCase();
   localStorage.setItem(STORAGE_NAME_KEY, first + "|" + last);
-
   document.getElementById("name-screen").style.display = "none";
-  enterMainApp();
+  startTutorial();
 });
 
 document.getElementById("last-name-input").addEventListener("keydown", e => {
@@ -1128,16 +998,14 @@ document.getElementById("first-name-input").addEventListener("keydown", e => {
   if (e.key === "Enter") document.getElementById("last-name-input").focus();
 });
 
-// Restore name if returning
 window.addEventListener("DOMContentLoaded", () => {
   const saved = localStorage.getItem(STORAGE_NAME_KEY);
   if (saved) {
     if (saved.includes("|")) {
       const [first, last] = saved.split("|");
       document.getElementById("first-name-input").value = first;
-      document.getElementById("last-name-input").value = last;
+      document.getElementById("last-name-input").value  = last;
     } else {
-      // legacy single-field fallback
       document.getElementById("first-name-input").value = saved;
     }
   }
@@ -1155,8 +1023,7 @@ function showTutorialStep(i) {
   const step = TUTORIAL_STEPS[i];
   tutorialWaitingForNext = false;
 
-  document.getElementById("t-step").textContent         = i + 1;
-  // Hide the difficulty badge until they answer — don't give it away
+  document.getElementById("t-step").textContent = i + 1;
   const badge = document.getElementById("tutorial-badge");
   badge.textContent = "?";
   badge.className   = "badge-easy badge-neutral";
@@ -1173,12 +1040,10 @@ function showTutorialStep(i) {
 
 function tutorialAnswer(answer) {
   if (tutorialWaitingForNext) return;
-
   const step = TUTORIAL_STEPS[tutorialIndex];
   const fb   = document.getElementById("tutorial-feedback");
 
   if (answer === step.answer) {
-    // Reveal the difficulty badge now that they've answered
     const badge = document.getElementById("tutorial-badge");
     badge.textContent = step.difficulty;
     badge.className   = "badge-easy " + step.badgeClass;
@@ -1189,12 +1054,9 @@ function tutorialAnswer(answer) {
     document.getElementById("tutorial-next-btn").style.display = "block";
     document.getElementById("tutorial-btns").style.display = "none";
   } else {
-    // Wrong — show explanation but DON'T advance
     fb.className = "wrong";
-    fb.innerHTML = "❌ Not quite. Try again!<br><br>" +
-      "<small>Think about what feeling the person is expressing.<br>Read it again carefully.</small>";
+    fb.innerHTML = "❌ Not quite. Try again!<br><br><small>Think about what feeling the person is expressing.<br>Read it again carefully.</small>";
     fb.style.display = "block";
-    // Shake the card
     const card = document.getElementById("tutorial-card");
     card.style.transition = "transform 0.1s";
     card.style.transform = "translateX(-8px)";
@@ -1206,7 +1068,6 @@ function tutorialAnswer(answer) {
 function tutorialNext() {
   tutorialIndex++;
   if (tutorialIndex >= TUTORIAL_STEPS.length) {
-    // Tutorial complete — go to main app
     document.getElementById("tutorial-screen").style.display = "none";
     enterMainApp();
   } else {
@@ -1247,23 +1108,27 @@ function startTimer() {
   }, 1000);
 }
 
-function stopTimer() {
-  clearInterval(timerInterval);
-}
+function stopTimer() { clearInterval(timerInterval); }
 
 // ── CARD DISPLAY ──────────────────────────────────────────────────────────────
 function nextCard() {
-  if (queue.length === 0) {
-    showDone();
-    return;
-  }
-  current = queue.shift();
-  document.getElementById("card-text").textContent = current.text;
-  document.getElementById("meta-topic").textContent  = current.topic || "";
-  document.getElementById("meta-likes").textContent  = current.likes ? `♥ ${current.likes}` : "";
+  if (queue.length === 0) { showDone(); return; }
+  current    = queue.shift();
+  editedText = null;          // reset edit state for new card
+  isEditMode = false;
+
+  document.getElementById("card-text").textContent     = current.text;
+  document.getElementById("card-text").style.display   = "flex";
+  document.getElementById("card-edit-area").style.display = "none";
+  document.getElementById("edit-badge").style.display  = "none";
+  document.getElementById("edit-btn").classList.remove("active");
+
+  document.getElementById("meta-topic").textContent = current.topic || "";
+  document.getElementById("meta-likes").textContent = current.likes ? `♥ ${current.likes}` : "";
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
 
   const card = document.getElementById("card");
+  card.classList.remove("edit-mode");
   card.style.transition = "none";
   card.style.transform  = "translateX(0) rotate(0deg)";
   card.style.opacity    = "1";
@@ -1282,13 +1147,84 @@ function showDone() {
   document.getElementById("done-screen").style.display = "flex";
 }
 
+// ── EDIT MODE ─────────────────────────────────────────────────────────────────
+function toggleEdit() {
+  if (!current) return;
+  if (isEditMode) {
+    cancelEdit();
+  } else {
+    enterEditMode();
+  }
+}
+
+function enterEditMode() {
+  isEditMode = true;
+  stopTimer(); // pause timer while editing
+
+  const displayText = editedText !== null ? editedText : current.text;
+  document.getElementById("card-textarea").value = displayText;
+
+  document.getElementById("card-text").style.display      = "none";
+  document.getElementById("card-edit-area").style.display = "flex";
+  document.getElementById("edit-btn").classList.add("active");
+
+  // Disable swipe/drag while editing
+  document.getElementById("card").classList.add("edit-mode");
+
+  // Prevent hints showing
+  document.getElementById("hint-pos").style.opacity = "0";
+  document.getElementById("hint-neg").style.opacity = "0";
+  document.getElementById("hint-neu").style.opacity = "0";
+
+  // Focus the textarea
+  setTimeout(() => document.getElementById("card-textarea").focus(), 50);
+}
+
+function confirmEdit() {
+  const newText = document.getElementById("card-textarea").value.trim();
+  if (!newText) { showToast("Text can't be empty!"); return; }
+
+  editedText = newText;
+  isEditMode = false;
+
+  // Update the display text
+  document.getElementById("card-text").textContent     = editedText;
+  document.getElementById("card-text").style.display   = "flex";
+  document.getElementById("card-edit-area").style.display = "none";
+  document.getElementById("edit-badge").style.display  = "block";
+  document.getElementById("edit-btn").classList.remove("active");
+  document.getElementById("card").classList.remove("edit-mode");
+
+  startTimer(); // resume timer
+  showToast("✏️ Edit saved — now label it!");
+}
+
+function cancelEdit() {
+  isEditMode = false;
+
+  document.getElementById("card-text").style.display      = "flex";
+  document.getElementById("card-edit-area").style.display = "none";
+  document.getElementById("edit-btn").classList.remove("active");
+  document.getElementById("card").classList.remove("edit-mode");
+
+  // If there was a prior confirmed edit, keep the badge; otherwise hide it
+  if (editedText === null) {
+    document.getElementById("edit-badge").style.display = "none";
+  }
+
+  startTimer(); // resume timer
+}
+
 // ── LABEL ─────────────────────────────────────────────────────────────────────
 function label(sentiment) {
   if (!current) return;
+  if (isEditMode) { showToast("Finish editing first — then label!"); return; }
   stopTimer();
 
-  const item = current;
-  current = null;
+  const item         = current;
+  const finalText    = editedText !== null ? editedText : item.text;
+  const wasEdited    = editedText !== null;
+  current            = null;
 
   labeledIds.add(String(item.id));
   labeledCount++;
@@ -1297,10 +1233,8 @@ function label(sentiment) {
     localStorage.setItem(STORAGE_COUNT_KEY, String(labeledCount));
   } catch {}
 
-  // Push to undo stack (keep max 1)
-  undoStack = [{ item, sentiment }];
+  undoStack = [{ item, sentiment, editedText }];
   document.getElementById("undo-btn").disabled = false;
-
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
 
   const card = document.getElementById("card");
@@ -1318,12 +1252,14 @@ function label(sentiment) {
 
   sendToSheet({
     labeler,
-    tweet_id:  item.id || "",
-    text:      item.text,
-    topic:     item.topic || "",
-    label:     sentiment,
-    time_taken: timerSeconds,
-    timestamp: new Date().toISOString(),
+    tweet_id:      item.id || "",
+    text:          finalText,
+    original_text: wasEdited ? item.text : "",
+    edited:        wasEdited ? "yes" : "no",
+    topic:         item.topic || "",
+    label:         sentiment,
+    time_taken:    timerSeconds,
+    timestamp:     new Date().toISOString(),
   });
 
   setTimeout(nextCard, 380);
@@ -1332,12 +1268,11 @@ function label(sentiment) {
 // ── SKIP ──────────────────────────────────────────────────────────────────────
 function skipCard() {
   if (!current) return;
+  if (isEditMode) { cancelEdit(); return; }
   stopTimer();
 
   const item = current;
-  current = null;
-
-  // Put it back at the end of the queue so it returns later
+  current    = null;
   queue.push(item);
 
   const card = document.getElementById("card");
@@ -1346,18 +1281,14 @@ function skipCard() {
   card.style.opacity    = "0";
 
   showLabelReveal("skip");
-
-  setTimeout(() => {
-    nextCard();
-  }, 320);
+  setTimeout(nextCard, 320);
 }
 
 // ── UNDO ──────────────────────────────────────────────────────────────────────
 function undoLast() {
   if (undoStack.length === 0) return;
-  const { item } = undoStack.pop();
+  const { item, editedText: prevEdit } = undoStack.pop();
 
-  // Reverse the label
   labeledIds.delete(String(item.id));
   labeledCount = Math.max(0, labeledCount - 1);
   try {
@@ -1368,18 +1299,26 @@ function undoLast() {
   document.getElementById("undo-btn").disabled = true;
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
 
-  // Put the current card back in queue and show the undone card
   if (current) queue.unshift(current);
-  current = null;
+  current    = null;
+  editedText = prevEdit;
+  isEditMode = false;
 
-  // Animate card in from the right
+  const displayText = prevEdit !== null ? prevEdit : item.text;
+
   const card = document.getElementById("card");
+  card.classList.remove("edit-mode");
   card.style.transition = "none";
   card.style.transform  = "translateX(300px)";
   card.style.opacity    = "0";
-  document.getElementById("card-text").textContent = item.text;
-  document.getElementById("meta-topic").textContent  = item.topic || "";
-  document.getElementById("meta-likes").textContent  = item.likes ? `♥ ${item.likes}` : "";
+
+  document.getElementById("card-text").textContent     = displayText;
+  document.getElementById("card-text").style.display   = "flex";
+  document.getElementById("card-edit-area").style.display = "none";
+  document.getElementById("edit-badge").style.display  = prevEdit !== null ? "block" : "none";
+  document.getElementById("edit-btn").classList.remove("active");
+  document.getElementById("meta-topic").textContent    = item.topic || "";
+  document.getElementById("meta-likes").textContent    = item.likes ? `♥ ${item.likes}` : "";
 
   requestAnimationFrame(() => {
     card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
@@ -1392,18 +1331,17 @@ function undoLast() {
   showToast("↩ Undone! Re-label this one.");
 }
 
-// ── LABEL REVEAL ANIMATION ────────────────────────────────────────────────────
+// ── LABEL REVEAL ──────────────────────────────────────────────────────────────
 function showLabelReveal(sentiment) {
   const el = document.getElementById("label-reveal");
   el.className = "";
-  void el.offsetWidth; // force reflow to restart animation
-
+  void el.offsetWidth;
   const map = {
-    positive: { icon: "👍", text: "POSITIVE", cls: "rv-positive" },
-    negative: { icon: "👎", text: "NEGATIVE", cls: "rv-negative" },
-    neutral:  { icon: "🤷", text: "NEUTRAL",  cls: "rv-neutral"  },
-    delete:   { icon: "🗑️", text: "DELETE",   cls: "rv-delete"   },
-    skip:     { icon: "⏭",  text: "SKIPPED",  cls: "rv-skip"     },
+    positive: { icon:"👍", text:"POSITIVE", cls:"rv-positive" },
+    negative: { icon:"👎", text:"NEGATIVE", cls:"rv-negative" },
+    neutral:  { icon:"🤷", text:"NEUTRAL",  cls:"rv-neutral"  },
+    delete:   { icon:"🗑️", text:"DELETE",   cls:"rv-delete"   },
+    skip:     { icon:"⏭",  text:"SKIPPED",  cls:"rv-skip"     },
   };
   const m = map[sentiment] || map.skip;
   el.innerHTML = `<span>${m.icon}</span><span>${m.text}</span>`;
@@ -1428,13 +1366,12 @@ async function fetchLeaderboard() {
     const text = await res.text();
     let data;
     try { data = JSON.parse(text); } catch { data = null; }
-
     if (!data) {
       container.innerHTML = '<div style="font-size:0.7rem;color:var(--muted);text-align:center;padding:20px">Could not load scores.<br>Check back later.</div>';
       return;
     }
     renderLeaderboard(Array.isArray(data) ? data : Object.values(data));
-  } catch (e) {
+  } catch {
     container.innerHTML = '<div style="font-size:0.7rem;color:var(--muted);text-align:center;padding:20px">Could not reach leaderboard.</div>';
   }
 }
@@ -1445,20 +1382,17 @@ function renderLeaderboard(data) {
     container.innerHTML = '<div style="font-size:0.7rem;color:var(--muted);text-align:center;padding:20px">No scores yet — be the first!</div>';
     return;
   }
-
-  // Sort by count descending
   const sorted = [...data].sort((a, b) => (b.count || 0) - (a.count || 0));
   const maxCount = sorted[0]?.count || 1;
   const rankClasses = ["gold", "silver", "bronze"];
 
   container.innerHTML = sorted.map((row, i) => {
-    const name = row.name || row.labeler || "?";
+    const name  = row.name || row.labeler || "?";
     const count = row.count || row.labeled || 0;
-    const isMe = name.toLowerCase() === labeler.toLowerCase();
+    const isMe  = name.toLowerCase() === labeler.toLowerCase();
     const rankClass = rankClasses[i] || "";
     const rankLabel = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `#${i+1}`;
     const barPct = Math.round((count / maxCount) * 100);
-
     return `
       <div class="lb-row">
         <div class="lb-rank ${rankClass}">${rankLabel}</div>
@@ -1471,16 +1405,14 @@ function renderLeaderboard(data) {
             <div class="lb-bar ${isMe ? 'me' : 'other'}" style="width:${barPct}%"></div>
           </div>
         </div>
-      </div>
-    `;
+      </div>`;
   }).join('');
 
-  document.getElementById("lb-last-updated").textContent =
-    "Updated " + new Date().toLocaleTimeString();
+  document.getElementById("lb-last-updated").textContent = "Updated " + new Date().toLocaleTimeString();
 }
 
 function toggleLeaderboard() {
-  const panel = document.getElementById("lb-panel");
+  const panel  = document.getElementById("lb-panel");
   const isOpen = panel.style.display === "flex";
   panel.style.display = isOpen ? "none" : "flex";
   if (!isOpen) fetchLeaderboard();
@@ -1508,7 +1440,7 @@ function showToast(msg) {
 
 // ── KEYBOARD ──────────────────────────────────────────────────────────────────
 document.addEventListener("keydown", e => {
-  // Tutorial keyboard support
+  // Tutorial
   if (document.getElementById("tutorial-screen").style.display === "flex") {
     if (e.key === "ArrowRight") tutorialAnswer("positive");
     if (e.key === "ArrowLeft")  tutorialAnswer("negative");
@@ -1518,13 +1450,22 @@ document.addEventListener("keydown", e => {
     return;
   }
 
+  // Block labeling shortcuts when textarea is focused
+  const activeTag = document.activeElement?.tagName;
+  if (activeTag === "TEXTAREA" || activeTag === "INPUT") {
+    if (e.key === "Escape") cancelEdit();
+    return;
+  }
+
   if (!current) return;
   if (e.key === "ArrowRight") label("positive");
   if (e.key === "ArrowLeft")  label("negative");
   if (e.key === "ArrowUp")    label("neutral");
   if (e.key === "ArrowDown")  label("delete");
-  if (e.key === " ") { e.preventDefault(); skipCard(); }
+  if (e.key === " ")          { e.preventDefault(); skipCard(); }
   if ((e.key === "z" || e.key === "Z") && !e.metaKey && !e.ctrlKey) undoLast();
+  if (e.key === "e" || e.key === "E") { e.preventDefault(); toggleEdit(); }
+  if (e.key === "Escape" && isEditMode) cancelEdit();
 });
 
 // ── SWIPE / DRAG ──────────────────────────────────────────────────────────────
@@ -1532,15 +1473,15 @@ let startX = 0, startY = 0, isDragging = false;
 const card = document.getElementById("card");
 
 function onStart(x, y) {
-  if (!current) return;
+  if (!current || isEditMode) return;
   startX = x; startY = y;
   isDragging = true;
 }
 
 function onMove(x, y) {
-  if (!isDragging || !current) return;
-  const dx = x - startX;
-  const dy = y - startY;
+  if (!isDragging || !current || isEditMode) return;
+  const dx  = x - startX;
+  const dy  = y - startY;
   const rot = dx * 0.08;
   card.style.transition = "none";
   card.style.transform  = `translateX(${dx}px) translateY(${dy}px) rotate(${rot}deg)`;
@@ -1552,7 +1493,7 @@ function onMove(x, y) {
 }
 
 function onEnd(x, y) {
-  if (!isDragging || !current) return;
+  if (!isDragging || !current || isEditMode) return;
   isDragging = false;
   const dx = x - startX;
   const dy = y - startY;
@@ -1579,6 +1520,7 @@ card.addEventListener("touchstart", e => {
   onStart(t.clientX, t.clientY);
 }, { passive: true });
 card.addEventListener("touchmove", e => {
+  if (isEditMode) return;
   e.preventDefault();
   const t = e.touches[0];
   onMove(t.clientX, t.clientY);
@@ -1588,9 +1530,10 @@ card.addEventListener("touchend", e => {
   onEnd(t.clientX, t.clientY);
 });
 
-// Double tap to delete on mobile
+// Double tap to delete on mobile (only when not editing)
 let lastTap = 0;
 card.addEventListener("touchend", () => {
+  if (isEditMode) return;
   const now = Date.now();
   if (now - lastTap < 300) label("delete");
   lastTap = now;
