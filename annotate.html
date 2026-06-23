@@ -762,7 +762,7 @@
     <input class="name-input" id="first-name-input" type="text" placeholder="First name" autocomplete="off" />
     <input class="name-input" id="last-name-input" type="text" placeholder="Last name" autocomplete="off" />
   </div>
-  <button id="start-btn">START TUTORIAL →</button>
+  <button id="start-btn">START →</button>
 </div>
 
 <!-- Tutorial Screen -->
@@ -988,7 +988,7 @@ document.getElementById("start-btn").addEventListener("click", () => {
   labeler = (first + " " + last).toLowerCase();
   localStorage.setItem(STORAGE_NAME_KEY, first + "|" + last);
   document.getElementById("name-screen").style.display = "none";
-  startTutorial();
+  enterMainApp();
 });
 
 document.getElementById("last-name-input").addEventListener("keydown", e => {
