@@ -43,536 +43,120 @@
     gap: 20px;
     padding: 32px;
   }
-
-  #name-screen h1 {
-    font-size: clamp(1.4rem, 5vw, 2rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    text-align: center;
-  }
-
-  #name-screen .subtitle {
-    color: var(--muted);
-    font-size: 0.75rem;
-    text-align: center;
-    line-height: 1.8;
-    max-width: 340px;
-  }
-
-  #name-screen .name-rule {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 12px 16px;
-    font-size: 0.7rem;
-    color: var(--muted);
-    max-width: 340px;
-    line-height: 1.7;
-    text-align: center;
-  }
-
+  #name-screen h1 { font-size: clamp(1.4rem, 5vw, 2rem); font-weight: 700; letter-spacing: -0.03em; text-align: center; }
+  #name-screen .subtitle { color: var(--muted); font-size: 0.75rem; text-align: center; line-height: 1.8; max-width: 340px; }
+  #name-screen .name-rule { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; font-size: 0.7rem; color: var(--muted); max-width: 340px; line-height: 1.7; text-align: center; }
   #name-screen .name-rule strong { color: var(--text); }
-
-  .name-inputs-row {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    max-width: 320px;
-  }
-
-  .name-input {
-    flex: 1;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 14px 12px;
-    color: var(--text);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.2s;
-    text-align: center;
-    min-width: 0;
-  }
+  .name-inputs-row { display: flex; gap: 10px; width: 100%; max-width: 320px; }
+  .name-input { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 14px 12px; color: var(--text); font-family: 'Space Mono', monospace; font-size: 0.9rem; outline: none; transition: border-color 0.2s; text-align: center; min-width: 0; }
   .name-input:focus { border-color: var(--muted); }
-
-  #start-btn {
-    width: 100%;
-    max-width: 320px;
-    padding: 14px;
-    background: var(--text);
-    color: var(--bg);
-    border: none;
-    border-radius: 8px;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.9rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: opacity 0.2s;
-  }
+  #start-btn { width: 100%; max-width: 320px; padding: 14px; background: var(--text); color: var(--bg); border: none; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: opacity 0.2s; }
   #start-btn:hover { opacity: 0.85; }
 
   /* ── TUTORIAL SCREEN ── */
-  #tutorial-screen {
-    display: none;
-    position: fixed; inset: 0;
-    background: var(--bg);
-    z-index: 90;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
-    gap: 20px;
-  }
-
-  #tutorial-progress {
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-
-  #tutorial-badge {
-    padding: 4px 14px;
-    border-radius: 100px;
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+  #tutorial-screen { display: none; position: fixed; inset: 0; background: var(--bg); z-index: 90; flex-direction: column; align-items: center; justify-content: center; padding: 24px; gap: 20px; }
+  #tutorial-progress { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
+  #tutorial-badge { padding: 4px 14px; border-radius: 100px; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
   .badge-easy    { background: rgba(34,197,94,0.15);  color: var(--pos); border: 1px solid rgba(34,197,94,0.3); }
   .badge-medium  { background: rgba(245,158,11,0.15); color: #f59e0b;    border: 1px solid rgba(245,158,11,0.3); }
   .badge-hard    { background: rgba(239,68,68,0.15);  color: var(--neg); border: 1px solid rgba(239,68,68,0.3); }
   .badge-neutral { background: rgba(59,130,246,0.15); color: var(--neu); border: 1px solid rgba(59,130,246,0.3); }
   .badge-delete  { background: rgba(245,158,11,0.15); color: #f59e0b;    border: 1px solid rgba(245,158,11,0.3); }
-
-  #tutorial-card {
-    width: 100%;
-    max-width: 520px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: clamp(20px, 5vw, 36px);
-  }
-
-  #tutorial-tweet {
-    font-family: 'Cairo', sans-serif;
-    font-size: clamp(1rem, 3vw, 1.35rem);
-    line-height: 1.7;
-    font-weight: 600;
-    text-align: center;
-    margin-bottom: 16px;
-    word-break: break-word;
-  }
-
-  #tutorial-question {
-    font-size: 0.7rem;
-    color: var(--muted);
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-
-  #tutorial-btns {
-    display: flex;
-    gap: 10px;
-    width: 100%;
-    max-width: 520px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .t-btn {
-    flex: 1;
-    min-width: 100px;
-    padding: 14px 8px;
-    border: none;
-    border-radius: 10px;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-    cursor: pointer;
-    letter-spacing: 0.04em;
-    transition: transform 0.1s, opacity 0.2s;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
-  }
+  #tutorial-card { width: 100%; max-width: 520px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: clamp(20px, 5vw, 36px); }
+  #tutorial-tweet { font-family: 'Cairo', sans-serif; font-size: clamp(1rem, 3vw, 1.35rem); line-height: 1.7; font-weight: 600; text-align: center; margin-bottom: 16px; word-break: break-word; }
+  #tutorial-question { font-size: 0.7rem; color: var(--muted); text-align: center; letter-spacing: 0.05em; }
+  #tutorial-btns { display: flex; gap: 10px; width: 100%; max-width: 520px; flex-wrap: wrap; justify-content: center; }
+  .t-btn { flex: 1; min-width: 100px; padding: 14px 8px; border: none; border-radius: 10px; font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; cursor: pointer; letter-spacing: 0.04em; transition: transform 0.1s, opacity 0.2s; display: flex; flex-direction: column; align-items: center; gap: 4px; }
   .t-btn:active { transform: scale(0.95); }
-  .t-btn-pos  { background: var(--pos-dim); color: var(--pos); }
-  .t-btn-neg  { background: var(--neg-dim); color: var(--neg); }
-  .t-btn-neu  { background: var(--neu-dim); color: var(--neu); }
-  .t-btn-del  { background: rgba(245,158,11,0.12); color: #f59e0b; }
-
+  .t-btn-pos { background: var(--pos-dim); color: var(--pos); }
+  .t-btn-neg { background: var(--neg-dim); color: var(--neg); }
+  .t-btn-neu { background: var(--neu-dim); color: var(--neu); }
+  .t-btn-del { background: rgba(245,158,11,0.12); color: #f59e0b; }
   .t-btn .btn-icon  { font-size: 1.4rem; }
   .t-btn .btn-label { font-size: 0.6rem; opacity: 0.7; }
-
-  #tutorial-feedback {
-    display: none;
-    width: 100%;
-    max-width: 520px;
-    background: var(--surface);
-    border-radius: 12px;
-    padding: 16px 20px;
-    font-size: 0.75rem;
-    line-height: 1.7;
-    text-align: center;
-    border: 1px solid var(--border);
-  }
+  #tutorial-feedback { display: none; width: 100%; max-width: 520px; background: var(--surface); border-radius: 12px; padding: 16px 20px; font-size: 0.75rem; line-height: 1.7; text-align: center; border: 1px solid var(--border); }
   #tutorial-feedback.wrong { border-color: var(--neg); color: #fca5a5; }
   #tutorial-feedback.right { border-color: var(--pos); color: #86efac; }
-
-  #tutorial-next-btn {
-    display: none;
-    padding: 12px 32px;
-    background: var(--text);
-    color: var(--bg);
-    border: none;
-    border-radius: 8px;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.85rem;
-    font-weight: 700;
-    cursor: pointer;
-    letter-spacing: 0.05em;
-  }
+  #tutorial-next-btn { display: none; padding: 12px 32px; background: var(--text); color: var(--bg); border: none; border-radius: 8px; font-family: 'Space Mono', monospace; font-size: 0.85rem; font-weight: 700; cursor: pointer; letter-spacing: 0.05em; }
 
   /* ── MAIN APP ── */
-  #app {
-    display: none;
-    position: fixed; inset: 0;
-    flex-direction: column;
-  }
+  #app { display: none; position: fixed; inset: 0; flex-direction: column; }
 
   /* ── HEADER ── */
-  #header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 16px;
-    border-bottom: 1px solid var(--border);
-    flex-shrink: 0;
-    gap: 8px;
-  }
-
-  #labeler-name {
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    flex-shrink: 0;
-  }
-
-  #header-center {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex: 1;
-    justify-content: center;
-  }
-
-  #counter {
-    font-size: 1rem;
-    color: var(--text);
-    letter-spacing: 0.02em;
-    font-weight: 700;
-    white-space: nowrap;
-  }
+  #header { display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; border-bottom: 1px solid var(--border); flex-shrink: 0; gap: 8px; }
+  #labeler-name { font-size: 0.65rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; flex-shrink: 0; }
+  #header-center { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: center; flex-wrap: wrap; }
+  #counter { font-size: 1rem; color: var(--text); letter-spacing: 0.02em; font-weight: 700; white-space: nowrap; }
   #counter span { color: var(--muted); font-weight: 400; font-size: 0.7rem; }
 
-  #timer {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--muted);
-    letter-spacing: 0.05em;
-    font-variant-numeric: tabular-nums;
-    min-width: 52px;
-    text-align: center;
-    transition: color 0.3s;
-  }
+  /* ── BREAKDOWN PILLS ── */
+  #breakdown { display: flex; gap: 4px; align-items: center; }
+  .bk-pill { font-size: 0.55rem; font-weight: 700; letter-spacing: 0.04em; padding: 2px 6px; border-radius: 100px; border: 1px solid; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .bk-pos { color: var(--pos); border-color: rgba(34,197,94,0.3);  background: rgba(34,197,94,0.08); }
+  .bk-neg { color: var(--neg); border-color: rgba(239,68,68,0.3);  background: rgba(239,68,68,0.08); }
+  .bk-neu { color: var(--neu); border-color: rgba(59,130,246,0.3); background: rgba(59,130,246,0.08); }
+  .bk-del { color: #f59e0b;    border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.08); }
+
+  #timer { font-size: 1.1rem; font-weight: 700; color: var(--muted); letter-spacing: 0.05em; font-variant-numeric: tabular-nums; min-width: 44px; text-align: center; transition: color 0.3s; }
   #timer.warn   { color: #f59e0b; }
   #timer.danger { color: var(--neg); animation: timerPulse 0.6s ease infinite alternate; }
-  @keyframes timerPulse {
-    from { opacity: 1; }
-    to   { opacity: 0.5; }
-  }
+  @keyframes timerPulse { from { opacity: 1; } to { opacity: 0.5; } }
 
-  #lb-btn {
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.6rem;
-    padding: 4px 8px;
-    cursor: pointer;
-    letter-spacing: 0.05em;
-    flex-shrink: 0;
-    transition: border-color 0.2s, color 0.2s;
-  }
+  #lb-btn { background: none; border: 1px solid var(--border); border-radius: 6px; color: var(--muted); font-family: 'Space Mono', monospace; font-size: 0.6rem; padding: 4px 8px; cursor: pointer; letter-spacing: 0.05em; flex-shrink: 0; transition: border-color 0.2s, color 0.2s; }
   #lb-btn:hover { border-color: var(--text); color: var(--text); }
 
   /* ── LEADERBOARD PANEL ── */
-  #lb-panel {
-    display: none;
-    position: fixed;
-    top: 0; right: 0;
-    width: min(320px, 90vw);
-    height: 100%;
-    background: var(--surface);
-    border-left: 1px solid var(--border);
-    z-index: 80;
-    flex-direction: column;
-    padding: 20px;
-    gap: 12px;
-    overflow-y: auto;
-  }
-
-  #lb-panel h3 {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--muted);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  #lb-close {
-    background: none;
-    border: none;
-    color: var(--muted);
-    cursor: pointer;
-    font-size: 1rem;
-    padding: 0;
-  }
-
-  .lb-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    background: var(--bg);
-    border-radius: 8px;
-    border: 1px solid var(--border);
-  }
-
+  #lb-panel { display: none; position: fixed; top: 0; right: 0; width: min(320px, 90vw); height: 100%; background: var(--surface); border-left: 1px solid var(--border); z-index: 80; flex-direction: column; padding: 20px; gap: 12px; overflow-y: auto; }
+  #lb-panel h3 { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; justify-content: space-between; }
+  #lb-close { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 1rem; padding: 0; }
+  .lb-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--bg); border-radius: 8px; border: 1px solid var(--border); }
   .lb-rank { font-size: 0.7rem; color: var(--muted); min-width: 20px; text-align: right; }
   .lb-rank.gold   { color: #fbbf24; }
   .lb-rank.silver { color: #94a3b8; }
   .lb-rank.bronze { color: #b45309; }
-
-  .lb-name {
-    flex: 1;
-    font-size: 0.75rem;
-    font-weight: 700;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+  .lb-name { flex: 1; font-size: 0.75rem; font-weight: 700; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .lb-name.me { color: var(--pos); }
-
   .lb-count { font-size: 0.7rem; color: var(--muted); }
-
   .lb-bar-wrap { width: 100%; height: 2px; background: var(--border); border-radius: 1px; margin-top: 4px; }
   .lb-bar { height: 2px; border-radius: 1px; background: var(--pos); transition: width 0.5s ease; }
   .lb-bar.me    { background: var(--pos); }
   .lb-bar.other { background: var(--muted); }
-
   #lb-last-updated { font-size: 0.6rem; color: var(--muted); text-align: center; }
 
   /* ── CARD AREA ── */
-  #card-area {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    position: relative;
-    overflow: hidden;
-  }
-
-  #card {
-    width: 100%;
-    max-width: 560px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: clamp(24px, 5vw, 40px);
-    position: relative;
-    cursor: grab;
-    user-select: none;
-    transition: box-shadow 0.2s;
-    will-change: transform;
-  }
+  #card-area { flex: 1; display: flex; align-items: center; justify-content: center; padding: 16px; position: relative; overflow: hidden; }
+  #card { width: 100%; max-width: 560px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: clamp(24px, 5vw, 40px); position: relative; cursor: grab; user-select: none; transition: box-shadow 0.2s; will-change: transform; }
   #card:active { cursor: grabbing; }
   #card.edit-mode { cursor: default; }
-
-  #card-text {
-    font-family: 'Cairo', sans-serif;
-    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
-    line-height: 1.7;
-    font-weight: 600;
-    text-align: center;
-    word-break: break-word;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  #card-text { font-family: 'Cairo', sans-serif; font-size: clamp(1.1rem, 3.5vw, 1.5rem); line-height: 1.7; font-weight: 600; text-align: center; word-break: break-word; min-height: 80px; display: flex; align-items: center; justify-content: center; }
 
   /* ── EDIT MODE ── */
-  #card-edit-area {
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  #card-edit-label {
-    font-size: 0.6rem;
-    color: var(--muted);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    text-align: center;
-  }
-
-  #card-textarea {
-    font-family: 'Cairo', sans-serif;
-    font-size: clamp(1rem, 3vw, 1.3rem);
-    line-height: 1.7;
-    font-weight: 600;
-    text-align: center;
-    word-break: break-word;
-    background: var(--bg);
-    border: 1px solid rgba(59,130,246,0.5);
-    border-radius: 10px;
-    color: var(--text);
-    padding: 12px 14px;
-    resize: none;
-    outline: none;
-    width: 100%;
-    min-height: 100px;
-    transition: border-color 0.2s;
-  }
+  #card-edit-area { display: none; flex-direction: column; gap: 10px; }
+  #card-edit-label { font-size: 0.6rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; text-align: center; }
+  #card-textarea { font-family: 'Cairo', sans-serif; font-size: clamp(1rem, 3vw, 1.3rem); line-height: 1.7; font-weight: 600; text-align: center; word-break: break-word; background: var(--bg); border: 1px solid rgba(59,130,246,0.5); border-radius: 10px; color: var(--text); padding: 12px 14px; resize: none; outline: none; width: 100%; min-height: 100px; transition: border-color 0.2s; }
   #card-textarea:focus { border-color: var(--neu); }
-
-  #edit-confirm-row {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-  }
-
-  #edit-confirm-btn {
-    padding: 10px 24px;
-    background: var(--neu-dim);
-    border: 1px solid rgba(59,130,246,0.4);
-    border-radius: 8px;
-    color: var(--neu);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: background 0.2s, opacity 0.2s;
-  }
+  #edit-confirm-row { display: flex; gap: 8px; justify-content: center; }
+  #edit-confirm-btn { padding: 10px 24px; background: var(--neu-dim); border: 1px solid rgba(59,130,246,0.4); border-radius: 8px; color: var(--neu); font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: background 0.2s; }
   #edit-confirm-btn:hover { background: rgba(59,130,246,0.25); }
-
-  #edit-cancel-btn {
-    padding: 10px 18px;
-    background: transparent;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--muted);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-  }
+  #edit-cancel-btn { padding: 10px 18px; background: transparent; border: 1px solid var(--border); border-radius: 8px; color: var(--muted); font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
   #edit-cancel-btn:hover { border-color: var(--muted); color: var(--text); }
+  #edit-badge { display: none; position: absolute; top: 10px; right: 10px; font-size: 0.55rem; padding: 3px 8px; border-radius: 100px; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: var(--neu); letter-spacing: 0.06em; text-transform: uppercase; pointer-events: none; }
+  #card-meta { margin-top: 16px; display: flex; justify-content: center; gap: 16px; font-size: 0.65rem; color: var(--muted); letter-spacing: 0.05em; }
 
-  /* edit badge on card */
-  #edit-badge {
-    display: none;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 0.55rem;
-    padding: 3px 8px;
-    border-radius: 100px;
-    background: rgba(59,130,246,0.15);
-    border: 1px solid rgba(59,130,246,0.3);
-    color: var(--neu);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    pointer-events: none;
-  }
-
-  #card-meta {
-    margin-top: 16px;
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    font-size: 0.65rem;
-    color: var(--muted);
-    letter-spacing: 0.05em;
-  }
-
-  #hint-pos, #hint-neg, #hint-neu {
-    position: absolute;
-    inset: 0;
-    border-radius: 16px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.1s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 3rem;
-  }
+  #hint-pos, #hint-neg, #hint-neu { position: absolute; inset: 0; border-radius: 16px; opacity: 0; pointer-events: none; transition: opacity 0.1s; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
   #hint-pos { background: var(--pos-dim); }
   #hint-neg { background: var(--neg-dim); }
   #hint-neu { background: var(--neu-dim); }
 
   /* ── FEEDBACK FLASH ── */
-  #feedback {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 50;
-  }
+  #feedback { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 5rem; pointer-events: none; opacity: 0; z-index: 50; }
 
   /* ── CONTROLS BAR ── */
-  #controls-bar {
-    padding: 8px 16px;
-    border-top: 1px solid var(--border);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
-    flex-shrink: 0;
-  }
-
-  .ctrl-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3px;
-    padding: 6px 4px;
-    border-radius: 8px;
-    border: 1px solid var(--border);
-    background: var(--surface);
-  }
-
+  #controls-bar { padding: 8px 16px; border-top: 1px solid var(--border); display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; flex-shrink: 0; }
+  .ctrl-item { display: flex; flex-direction: column; align-items: center; gap: 3px; padding: 6px 4px; border-radius: 8px; border: 1px solid var(--border); background: var(--surface); }
   .ctrl-icon      { font-size: 1.1rem; }
   .ctrl-direction { font-size: 0.55rem; color: var(--muted); letter-spacing: 0.05em; text-transform: uppercase; }
   .ctrl-label     { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.04em; }
-
   .ctrl-pos .ctrl-label { color: var(--pos); }
   .ctrl-neg .ctrl-label { color: var(--neg); }
   .ctrl-neu .ctrl-label { color: var(--neu); }
@@ -583,108 +167,29 @@
   .ctrl-del { border-color: rgba(245,158,11,0.2); }
 
   /* ── ACTION BUTTONS (mobile) ── */
-  #action-btns {
-    display: none;
-    padding: 0 16px 12px;
-    gap: 8px;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .action-btn {
-    flex: 1;
-    max-width: 90px;
-    padding: 14px 0;
-    border: none;
-    border-radius: 12px;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: transform 0.1s, opacity 0.2s;
-    -webkit-tap-highlight-color: transparent;
-  }
+  #action-btns { display: none; padding: 0 16px 12px; gap: 8px; justify-content: center; flex-shrink: 0; }
+  .action-btn { flex: 1; max-width: 90px; padding: 14px 0; border: none; border-radius: 12px; font-size: 1.3rem; cursor: pointer; transition: transform 0.1s, opacity 0.2s; -webkit-tap-highlight-color: transparent; }
   .action-btn:active { transform: scale(0.93); }
-
   #btn-neg { background: var(--neg-dim); }
   #btn-neu { background: var(--neu-dim); }
   #btn-pos { background: var(--pos-dim); }
   #btn-del { background: rgba(245,158,11,0.12); }
 
   /* ── DONE SCREEN ── */
-  #done-screen {
-    display: none;
-    position: fixed; inset: 0;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-    padding: 32px;
-  }
+  #done-screen { display: none; position: fixed; inset: 0; align-items: center; justify-content: center; flex-direction: column; gap: 16px; text-align: center; padding: 32px; }
   #done-screen h2 { font-size: 1.6rem; }
   #done-screen p  { color: var(--muted); font-size: 0.8rem; line-height: 1.6; }
 
   /* ── LOADING ── */
-  #loading {
-    position: fixed; inset: 0;
-    display: flex; align-items: center; justify-content: center;
-    background: var(--bg);
-    z-index: 200;
-    font-size: 0.8rem;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-  }
+  #loading { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: var(--bg); z-index: 200; font-size: 0.8rem; color: var(--muted); letter-spacing: 0.1em; }
 
   /* ── TOAST ── */
-  #toast {
-    position: fixed;
-    bottom: 100px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    padding: 10px 20px;
-    font-size: 0.75rem;
-    color: var(--text);
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
-    pointer-events: none;
-    white-space: nowrap;
-    z-index: 300;
-  }
-  #toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
+  #toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 20px; font-size: 0.75rem; color: var(--text); opacity: 0; transition: opacity 0.3s, transform 0.3s; pointer-events: none; white-space: nowrap; z-index: 300; }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-  /* ── UTILITY ROW (undo / edit / skip) ── */
-  #utility-row {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    padding: 4px 16px 12px;
-    flex-shrink: 0;
-  }
-
-  .util-btn {
-    flex: 1;
-    max-width: 140px;
-    padding: 12px 0;
-    border-radius: 12px;
-    border: 1.5px solid var(--border);
-    background: var(--surface);
-    color: var(--text);
-    font-family: 'Space Mono', monospace;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    transition: border-color 0.2s, background 0.2s, opacity 0.2s, transform 0.1s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-  }
+  /* ── UTILITY ROW ── */
+  #utility-row { display: flex; justify-content: center; gap: 8px; padding: 4px 16px 12px; flex-shrink: 0; }
+  .util-btn { flex: 1; max-width: 140px; padding: 12px 0; border-radius: 12px; border: 1.5px solid var(--border); background: var(--surface); color: var(--text); font-family: 'Space Mono', monospace; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.05em; cursor: pointer; transition: border-color 0.2s, background 0.2s, opacity 0.2s, transform 0.1s; display: flex; align-items: center; justify-content: center; gap: 6px; }
   .util-btn:active { transform: scale(0.96); }
   #undo-btn { border-color: rgba(59,130,246,0.4); color: var(--neu); }
   #undo-btn:hover:not(:disabled) { background: rgba(59,130,246,0.1); border-color: var(--neu); }
@@ -696,29 +201,8 @@
   .util-btn:disabled { opacity: 0.25; cursor: default; }
   .util-btn:disabled:hover { background: var(--surface); }
 
-  /* ── LABEL REVEAL BANNER ── */
-  #label-reveal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.7);
-    background: var(--surface);
-    border: 2px solid var(--border);
-    border-radius: 20px;
-    padding: 18px 36px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 60;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    white-space: nowrap;
-    transition: none;
-  }
+  /* ── LABEL REVEAL ── */
+  #label-reveal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.7); background: var(--surface); border: 2px solid var(--border); border-radius: 20px; padding: 18px 36px; font-size: 1.1rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; pointer-events: none; opacity: 0; z-index: 60; display: flex; align-items: center; gap: 10px; white-space: nowrap; transition: none; }
   #label-reveal.pop { animation: labelPop 0.9s ease forwards; }
   @keyframes labelPop {
     0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.7); }
@@ -732,7 +216,6 @@
   #label-reveal.rv-neutral  { border-color: var(--neu); color: var(--neu); }
   #label-reveal.rv-delete   { border-color: #f59e0b;    color: #f59e0b; }
   #label-reveal.rv-skip     { border-color: var(--muted); color: var(--muted); }
-  #label-reveal.rv-edited   { border-color: #f59e0b;    color: #f59e0b; }
 
   @media (hover: none) and (pointer: coarse) {
     #action-btns { display: flex; }
@@ -775,18 +258,10 @@
   </div>
   <div id="tutorial-feedback"></div>
   <div id="tutorial-btns">
-    <button class="t-btn t-btn-neg" onclick="tutorialAnswer('negative')">
-      <span class="btn-icon">👎</span><span>NEGATIVE</span><span class="btn-label">← left</span>
-    </button>
-    <button class="t-btn t-btn-neu" onclick="tutorialAnswer('neutral')">
-      <span class="btn-icon">🤷</span><span>NEUTRAL</span><span class="btn-label">↑ up</span>
-    </button>
-    <button class="t-btn t-btn-pos" onclick="tutorialAnswer('positive')">
-      <span class="btn-icon">👍</span><span>POSITIVE</span><span class="btn-label">→ right</span>
-    </button>
-    <button class="t-btn t-btn-del" onclick="tutorialAnswer('delete')">
-      <span class="btn-icon">🗑️</span><span>DELETE</span><span class="btn-label">↓ down</span>
-    </button>
+    <button class="t-btn t-btn-neg" onclick="tutorialAnswer('negative')"><span class="btn-icon">👎</span><span>NEGATIVE</span><span class="btn-label">← left</span></button>
+    <button class="t-btn t-btn-neu" onclick="tutorialAnswer('neutral')"><span class="btn-icon">🤷</span><span>NEUTRAL</span><span class="btn-label">↑ up</span></button>
+    <button class="t-btn t-btn-pos" onclick="tutorialAnswer('positive')"><span class="btn-icon">👍</span><span>POSITIVE</span><span class="btn-label">→ right</span></button>
+    <button class="t-btn t-btn-del" onclick="tutorialAnswer('delete')"><span class="btn-icon">🗑️</span><span>DELETE</span><span class="btn-label">↓ down</span></button>
   </div>
   <button id="tutorial-next-btn" onclick="tutorialNext()">NEXT →</button>
 </div>
@@ -798,6 +273,12 @@
     <div id="labeler-name">—</div>
     <div id="header-center">
       <div id="counter">0 <span>labeled</span></div>
+      <div id="breakdown">
+        <span class="bk-pill bk-pos" id="bk-pos">👍 0</span>
+        <span class="bk-pill bk-neg" id="bk-neg">👎 0</span>
+        <span class="bk-pill bk-neu" id="bk-neu">🤷 0</span>
+        <span class="bk-pill bk-del" id="bk-del">🗑️ 0</span>
+      </div>
       <div id="timer">0s</div>
     </div>
     <button id="lb-btn" onclick="toggleLeaderboard()">🏆 RACE</button>
@@ -811,11 +292,7 @@
 
   <div id="card-area">
     <div id="card">
-
-      <!-- Normal display -->
       <div id="card-text">—</div>
-
-      <!-- Edit mode -->
       <div id="card-edit-area">
         <div id="card-edit-label">✏️ EDITING — fix the text then label as normal</div>
         <textarea id="card-textarea" rows="4" spellcheck="false"></textarea>
@@ -824,10 +301,7 @@
           <button id="edit-cancel-btn" onclick="cancelEdit()">✕ CANCEL</button>
         </div>
       </div>
-
-      <!-- Edited badge (shown after confirming edit, while still on the card) -->
       <div id="edit-badge">✏️ EDITED</div>
-
       <div id="card-meta">
         <span id="meta-topic"></span>
         <span id="meta-likes"></span>
@@ -839,26 +313,10 @@
   </div>
 
   <div id="controls-bar">
-    <div class="ctrl-item ctrl-neg">
-      <div class="ctrl-icon">👎</div>
-      <div class="ctrl-direction">← left</div>
-      <div class="ctrl-label">NEGATIVE</div>
-    </div>
-    <div class="ctrl-item ctrl-neu">
-      <div class="ctrl-icon">🤷</div>
-      <div class="ctrl-direction">↑ up</div>
-      <div class="ctrl-label">NEUTRAL</div>
-    </div>
-    <div class="ctrl-item ctrl-pos">
-      <div class="ctrl-icon">👍</div>
-      <div class="ctrl-direction">→ right</div>
-      <div class="ctrl-label">POSITIVE</div>
-    </div>
-    <div class="ctrl-item ctrl-del">
-      <div class="ctrl-icon">🗑️</div>
-      <div class="ctrl-direction">↓ down</div>
-      <div class="ctrl-label">DELETE</div>
-    </div>
+    <div class="ctrl-item ctrl-neg"><div class="ctrl-icon">👎</div><div class="ctrl-direction">← left</div><div class="ctrl-label">NEGATIVE</div></div>
+    <div class="ctrl-item ctrl-neu"><div class="ctrl-icon">🤷</div><div class="ctrl-direction">↑ up</div><div class="ctrl-label">NEUTRAL</div></div>
+    <div class="ctrl-item ctrl-pos"><div class="ctrl-icon">👍</div><div class="ctrl-direction">→ right</div><div class="ctrl-label">POSITIVE</div></div>
+    <div class="ctrl-item ctrl-del"><div class="ctrl-icon">🗑️</div><div class="ctrl-direction">↓ down</div><div class="ctrl-label">DELETE</div></div>
   </div>
 
   <div id="action-btns">
@@ -869,7 +327,7 @@
   </div>
 
   <div id="utility-row">
-    <button class="util-btn" id="undo-btn" onclick="undoLast()" disabled>↩ UNDO <span style="font-size:0.5rem;opacity:0.6">[Z]</span></button>
+    <button class="util-btn" id="undo-btn" onclick="undoLast()" disabled>↩ UNDO <span id="undo-count" style="font-size:0.5rem;opacity:0.6">[Z]</span></button>
     <button class="util-btn" id="edit-btn" onclick="toggleEdit()">✏️ EDIT <span style="font-size:0.5rem;opacity:0.6">[E]</span></button>
     <button class="util-btn" id="skip-btn" onclick="skipCard()">⏭ SKIP <span style="font-size:0.5rem;opacity:0.6">[SPC]</span></button>
   </div>
@@ -877,25 +335,27 @@
 </div>
 
 <div id="label-reveal"></div>
-
 <div id="done-screen">
   <div style="font-size:3rem">🎉</div>
   <h2>All done!</h2>
   <p>No more unlabeled comments right now.<br>Check back later as more are added.</p>
 </div>
-
 <div id="feedback"></div>
 <div id="toast"></div>
 
 <script>
 // ── CONFIG ────────────────────────────────────────────────────────────────────
 const SHEET_URL = "https://script.google.com/macros/s/AKfycbxB2WelK_trMgFri0KKjkzHSQsTnSyn69QD1bRDEL_8xhLV7MxueIrv_0in6xQFIX32/exec";
-const JSON_URL  = "https://karimelbarbary2024.github.io/Labelling/new_approach_30words.json";
-const POLL_MS    = 60_000;
-const LB_POLL_MS = 30_000;
-const STORAGE_KEY       = "arabizi_labeled_ids";
-const STORAGE_COUNT_KEY = "arabizi_labeled_count";
-const STORAGE_NAME_KEY  = "arabizi_labeler_name";
+// ① Updated to fetch from positive_twitter_30words.json
+const JSON_URL  = "https://karimelbarbary2024.github.io/Labelling/positive_twitter_30words.json";
+const POLL_MS        = 60_000;
+const LB_POLL_MS     = 30_000;
+const STORAGE_KEY           = "arabizi_labeled_ids";
+const STORAGE_COUNT_KEY     = "arabizi_labeled_count";
+const STORAGE_NAME_KEY      = "arabizi_labeler_name";
+const STORAGE_BREAKDOWN_KEY = "arabizi_label_breakdown";
+// ③ Undo depth
+const UNDO_LIMIT = 10;
 
 // ── TUTORIAL STEPS ────────────────────────────────────────────────────────────
 const TUTORIAL_STEPS = [
@@ -931,16 +391,19 @@ let queue        = [];
 let current      = null;
 let labeledCount = 0;
 let labeledIds   = new Set();
+
+// ③ Undo stack — up to UNDO_LIMIT entries (oldest dropped when full)
 let undoStack    = [];
+
+// ② Per-label breakdown counts (persisted)
+let breakdown = { positive: 0, negative: 0, neutral: 0, delete: 0 };
 
 let tutorialIndex = 0;
 let tutorialWaitingForNext = false;
 
-// Edit state
-let isEditMode   = false;
-let editedText   = null; // null = no edit this card, string = user edited
+let isEditMode = false;
+let editedText = null;
 
-// Timer
 let timerInterval = null;
 let timerSeconds  = 0;
 
@@ -950,11 +413,18 @@ async function init() {
     const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
     labeledIds   = new Set(stored);
     labeledCount = parseInt(localStorage.getItem(STORAGE_COUNT_KEY) || "0");
+    const bd = JSON.parse(localStorage.getItem(STORAGE_BREAKDOWN_KEY) || "null");
+    if (bd) breakdown = {
+      positive: bd.positive || 0,
+      negative: bd.negative || 0,
+      neutral:  bd.neutral  || 0,
+      delete:   bd.delete   || 0,
+    };
   } catch {}
 
   await loadComments();
 
-  document.getElementById("loading").style.display    = "none";
+  document.getElementById("loading").style.display     = "none";
   document.getElementById("name-screen").style.display = "flex";
 
   setInterval(async () => {
@@ -970,14 +440,33 @@ async function loadComments() {
     const res  = await fetch(JSON_URL + "?t=" + Date.now());
     const data = await res.json();
     allComments = Array.isArray(data) ? data : [];
-  } catch (e) {
-    console.warn("Could not load comments:", e);
-  }
+  } catch (e) { console.warn("Could not load comments:", e); }
 }
 
 function buildQueue() {
   const unlabeled = allComments.filter(c => c.id && !labeledIds.has(String(c.id)));
   queue = unlabeled.sort(() => Math.random() - 0.5);
+}
+
+// ── BREAKDOWN DISPLAY ─────────────────────────────────────────────────────────
+function updateBreakdownUI() {
+  document.getElementById("bk-pos").textContent = `👍 ${breakdown.positive}`;
+  document.getElementById("bk-neg").textContent = `👎 ${breakdown.negative}`;
+  document.getElementById("bk-neu").textContent = `🤷 ${breakdown.neutral}`;
+  document.getElementById("bk-del").textContent = `🗑️ ${breakdown.delete}`;
+}
+
+function saveBreakdown() {
+  try { localStorage.setItem(STORAGE_BREAKDOWN_KEY, JSON.stringify(breakdown)); } catch {}
+}
+
+// ── UNDO BUTTON LABEL ─────────────────────────────────────────────────────────
+function updateUndoBtn() {
+  const btn   = document.getElementById("undo-btn");
+  const badge = document.getElementById("undo-count");
+  const n = undoStack.length;
+  btn.disabled      = n === 0;
+  badge.textContent = n > 1 ? `[Z] ×${n}` : "[Z]";
 }
 
 // ── START ─────────────────────────────────────────────────────────────────────
@@ -1022,18 +511,15 @@ function startTutorial() {
 function showTutorialStep(i) {
   const step = TUTORIAL_STEPS[i];
   tutorialWaitingForNext = false;
-
   document.getElementById("t-step").textContent = i + 1;
   const badge = document.getElementById("tutorial-badge");
   badge.textContent = "?";
   badge.className   = "badge-easy badge-neutral";
   document.getElementById("tutorial-tweet").textContent = step.tweet;
   document.getElementById("tutorial-question").textContent = "What is the overall vibe of this comment?";
-
   const fb = document.getElementById("tutorial-feedback");
   fb.style.display = "none";
   fb.className = "";
-
   document.getElementById("tutorial-next-btn").style.display = "none";
   document.getElementById("tutorial-btns").style.display = "flex";
 }
@@ -1042,7 +528,6 @@ function tutorialAnswer(answer) {
   if (tutorialWaitingForNext) return;
   const step = TUTORIAL_STEPS[tutorialIndex];
   const fb   = document.getElementById("tutorial-feedback");
-
   if (answer === step.answer) {
     const badge = document.getElementById("tutorial-badge");
     badge.textContent = step.difficulty;
@@ -1080,7 +565,8 @@ function enterMainApp() {
   document.getElementById("app").style.display = "flex";
   document.getElementById("labeler-name").textContent = labeler.toUpperCase();
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
-  document.getElementById("undo-btn").disabled = true;
+  updateBreakdownUI();
+  updateUndoBtn();
   buildQueue();
   nextCard();
   fetchLeaderboard();
@@ -1114,15 +600,14 @@ function stopTimer() { clearInterval(timerInterval); }
 function nextCard() {
   if (queue.length === 0) { showDone(); return; }
   current    = queue.shift();
-  editedText = null;          // reset edit state for new card
+  editedText = null;
   isEditMode = false;
 
-  document.getElementById("card-text").textContent     = current.text;
-  document.getElementById("card-text").style.display   = "flex";
+  document.getElementById("card-text").textContent        = current.text;
+  document.getElementById("card-text").style.display      = "flex";
   document.getElementById("card-edit-area").style.display = "none";
-  document.getElementById("edit-badge").style.display  = "none";
+  document.getElementById("edit-badge").style.display     = "none";
   document.getElementById("edit-btn").classList.remove("active");
-
   document.getElementById("meta-topic").textContent = current.topic || "";
   document.getElementById("meta-likes").textContent = current.likes ? `♥ ${current.likes}` : "";
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
@@ -1132,87 +617,63 @@ function nextCard() {
   card.style.transition = "none";
   card.style.transform  = "translateX(0) rotate(0deg)";
   card.style.opacity    = "1";
-
   document.getElementById("hint-pos").style.opacity = "0";
   document.getElementById("hint-neg").style.opacity = "0";
   document.getElementById("hint-neu").style.opacity = "0";
-
   startTimer();
 }
 
 function showDone() {
   stopTimer();
   current = null;
-  document.getElementById("app").style.display = "none";
+  document.getElementById("app").style.display       = "none";
   document.getElementById("done-screen").style.display = "flex";
 }
 
 // ── EDIT MODE ─────────────────────────────────────────────────────────────────
 function toggleEdit() {
   if (!current) return;
-  if (isEditMode) {
-    cancelEdit();
-  } else {
-    enterEditMode();
-  }
+  isEditMode ? cancelEdit() : enterEditMode();
 }
 
 function enterEditMode() {
   isEditMode = true;
-  stopTimer(); // pause timer while editing
-
+  stopTimer();
   const displayText = editedText !== null ? editedText : current.text;
-  document.getElementById("card-textarea").value = displayText;
-
+  document.getElementById("card-textarea").value          = displayText;
   document.getElementById("card-text").style.display      = "none";
   document.getElementById("card-edit-area").style.display = "flex";
   document.getElementById("edit-btn").classList.add("active");
-
-  // Disable swipe/drag while editing
   document.getElementById("card").classList.add("edit-mode");
-
-  // Prevent hints showing
   document.getElementById("hint-pos").style.opacity = "0";
   document.getElementById("hint-neg").style.opacity = "0";
   document.getElementById("hint-neu").style.opacity = "0";
-
-  // Focus the textarea
   setTimeout(() => document.getElementById("card-textarea").focus(), 50);
 }
 
 function confirmEdit() {
   const newText = document.getElementById("card-textarea").value.trim();
   if (!newText) { showToast("Text can't be empty!"); return; }
-
   editedText = newText;
   isEditMode = false;
-
-  // Update the display text
-  document.getElementById("card-text").textContent     = editedText;
-  document.getElementById("card-text").style.display   = "flex";
+  document.getElementById("card-text").textContent        = editedText;
+  document.getElementById("card-text").style.display      = "flex";
   document.getElementById("card-edit-area").style.display = "none";
-  document.getElementById("edit-badge").style.display  = "block";
+  document.getElementById("edit-badge").style.display     = "block";
   document.getElementById("edit-btn").classList.remove("active");
   document.getElementById("card").classList.remove("edit-mode");
-
-  startTimer(); // resume timer
+  startTimer();
   showToast("✏️ Edit saved — now label it!");
 }
 
 function cancelEdit() {
   isEditMode = false;
-
   document.getElementById("card-text").style.display      = "flex";
   document.getElementById("card-edit-area").style.display = "none";
   document.getElementById("edit-btn").classList.remove("active");
   document.getElementById("card").classList.remove("edit-mode");
-
-  // If there was a prior confirmed edit, keep the badge; otherwise hide it
-  if (editedText === null) {
-    document.getElementById("edit-badge").style.display = "none";
-  }
-
-  startTimer(); // resume timer
+  if (editedText === null) document.getElementById("edit-badge").style.display = "none";
+  startTimer();
 }
 
 // ── LABEL ─────────────────────────────────────────────────────────────────────
@@ -1221,25 +682,31 @@ function label(sentiment) {
   if (isEditMode) { showToast("Finish editing first — then label!"); return; }
   stopTimer();
 
-  const item         = current;
-  const finalText    = editedText !== null ? editedText : item.text;
-  const wasEdited    = editedText !== null;
-  current            = null;
+  const item      = current;
+  const finalText = editedText !== null ? editedText : item.text;
+  const wasEdited = editedText !== null;
+  current         = null;
 
   labeledIds.add(String(item.id));
   labeledCount++;
+  breakdown[sentiment] = (breakdown[sentiment] || 0) + 1;
+
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify([...labeledIds]));
     localStorage.setItem(STORAGE_COUNT_KEY, String(labeledCount));
+    saveBreakdown();
   } catch {}
 
-  undoStack = [{ item, sentiment, editedText }];
-  document.getElementById("undo-btn").disabled = false;
+  // ③ Push to undo stack; drop oldest if we're at the limit
+  undoStack.push({ item, sentiment, editedText });
+  if (undoStack.length > UNDO_LIMIT) undoStack.shift();
+  updateUndoBtn();
+
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
+  updateBreakdownUI();
 
   const card = document.getElementById("card");
   card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
-
   let emoji = "";
   if (sentiment === "positive") { card.style.transform = "translateX(600px) rotate(15deg)";  emoji = "👍"; }
   if (sentiment === "negative") { card.style.transform = "translateX(-600px) rotate(-15deg)"; emoji = "👎"; }
@@ -1270,16 +737,13 @@ function skipCard() {
   if (!current) return;
   if (isEditMode) { cancelEdit(); return; }
   stopTimer();
-
   const item = current;
   current    = null;
   queue.push(item);
-
   const card = document.getElementById("card");
   card.style.transition = "transform 0.3s ease, opacity 0.3s ease";
   card.style.transform  = "translateX(600px) rotate(8deg)";
   card.style.opacity    = "0";
-
   showLabelReveal("skip");
   setTimeout(nextCard, 320);
 }
@@ -1287,17 +751,21 @@ function skipCard() {
 // ── UNDO ──────────────────────────────────────────────────────────────────────
 function undoLast() {
   if (undoStack.length === 0) return;
-  const { item, editedText: prevEdit } = undoStack.pop();
+  const { item, sentiment, editedText: prevEdit } = undoStack.pop();
+  updateUndoBtn();
 
   labeledIds.delete(String(item.id));
   labeledCount = Math.max(0, labeledCount - 1);
+  breakdown[sentiment] = Math.max(0, (breakdown[sentiment] || 0) - 1);
+
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify([...labeledIds]));
     localStorage.setItem(STORAGE_COUNT_KEY, String(labeledCount));
+    saveBreakdown();
   } catch {}
 
-  document.getElementById("undo-btn").disabled = true;
   document.getElementById("counter").innerHTML = `${labeledCount} <span>labeled</span>`;
+  updateBreakdownUI();
 
   if (current) queue.unshift(current);
   current    = null;
@@ -1305,20 +773,19 @@ function undoLast() {
   isEditMode = false;
 
   const displayText = prevEdit !== null ? prevEdit : item.text;
-
   const card = document.getElementById("card");
   card.classList.remove("edit-mode");
   card.style.transition = "none";
   card.style.transform  = "translateX(300px)";
   card.style.opacity    = "0";
 
-  document.getElementById("card-text").textContent     = displayText;
-  document.getElementById("card-text").style.display   = "flex";
+  document.getElementById("card-text").textContent        = displayText;
+  document.getElementById("card-text").style.display      = "flex";
   document.getElementById("card-edit-area").style.display = "none";
-  document.getElementById("edit-badge").style.display  = prevEdit !== null ? "block" : "none";
+  document.getElementById("edit-badge").style.display     = prevEdit !== null ? "block" : "none";
   document.getElementById("edit-btn").classList.remove("active");
-  document.getElementById("meta-topic").textContent    = item.topic || "";
-  document.getElementById("meta-likes").textContent    = item.likes ? `♥ ${item.likes}` : "";
+  document.getElementById("meta-topic").textContent = item.topic || "";
+  document.getElementById("meta-likes").textContent = item.likes ? `♥ ${item.likes}` : "";
 
   requestAnimationFrame(() => {
     card.style.transition = "transform 0.35s ease, opacity 0.35s ease";
@@ -1328,7 +795,8 @@ function undoLast() {
 
   current = item;
   startTimer();
-  showToast("↩ Undone! Re-label this one.");
+  const remaining = undoStack.length;
+  showToast(`↩ Undone!${remaining > 0 ? ` (${remaining} more undo${remaining > 1 ? "s" : ""} left)` : ""}`);
 }
 
 // ── LABEL REVEAL ──────────────────────────────────────────────────────────────
@@ -1351,10 +819,9 @@ function showLabelReveal(sentiment) {
 // ── SEND TO SHEET ─────────────────────────────────────────────────────────────
 function sendToSheet(data) {
   fetch(SHEET_URL, {
-    method:  "POST",
-    mode:    "no-cors",
+    method: "POST", mode: "no-cors",
     headers: { "Content-Type": "application/json" },
-    body:    JSON.stringify(data),
+    body: JSON.stringify(data),
   }).catch(console.warn);
 }
 
@@ -1385,7 +852,6 @@ function renderLeaderboard(data) {
   const sorted = [...data].sort((a, b) => (b.count || 0) - (a.count || 0));
   const maxCount = sorted[0]?.count || 1;
   const rankClasses = ["gold", "silver", "bronze"];
-
   container.innerHTML = sorted.map((row, i) => {
     const name  = row.name || row.labeler || "?";
     const count = row.count || row.labeled || 0;
@@ -1393,21 +859,17 @@ function renderLeaderboard(data) {
     const rankClass = rankClasses[i] || "";
     const rankLabel = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : `#${i+1}`;
     const barPct = Math.round((count / maxCount) * 100);
-    return `
-      <div class="lb-row">
-        <div class="lb-rank ${rankClass}">${rankLabel}</div>
-        <div style="flex:1;min-width:0">
-          <div style="display:flex;align-items:center;justify-content:space-between">
-            <div class="lb-name ${isMe ? 'me' : ''}">${isMe ? '⭐ ' : ''}${name}</div>
-            <div class="lb-count">${Number(count).toLocaleString()}</div>
-          </div>
-          <div class="lb-bar-wrap">
-            <div class="lb-bar ${isMe ? 'me' : 'other'}" style="width:${barPct}%"></div>
-          </div>
+    return `<div class="lb-row">
+      <div class="lb-rank ${rankClass}">${rankLabel}</div>
+      <div style="flex:1;min-width:0">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <div class="lb-name ${isMe ? 'me' : ''}">${isMe ? '⭐ ' : ''}${name}</div>
+          <div class="lb-count">${Number(count).toLocaleString()}</div>
         </div>
-      </div>`;
+        <div class="lb-bar-wrap"><div class="lb-bar ${isMe ? 'me' : 'other'}" style="width:${barPct}%"></div></div>
+      </div>
+    </div>`;
   }).join('');
-
   document.getElementById("lb-last-updated").textContent = "Updated " + new Date().toLocaleTimeString();
 }
 
@@ -1440,7 +902,6 @@ function showToast(msg) {
 
 // ── KEYBOARD ──────────────────────────────────────────────────────────────────
 document.addEventListener("keydown", e => {
-  // Tutorial
   if (document.getElementById("tutorial-screen").style.display === "flex") {
     if (e.key === "ArrowRight") tutorialAnswer("positive");
     if (e.key === "ArrowLeft")  tutorialAnswer("negative");
@@ -1449,14 +910,11 @@ document.addEventListener("keydown", e => {
     if (e.key === "Enter" && tutorialWaitingForNext) tutorialNext();
     return;
   }
-
-  // Block labeling shortcuts when textarea is focused
   const activeTag = document.activeElement?.tagName;
   if (activeTag === "TEXTAREA" || activeTag === "INPUT") {
     if (e.key === "Escape") cancelEdit();
     return;
   }
-
   if (!current) return;
   if (e.key === "ArrowRight") label("positive");
   if (e.key === "ArrowLeft")  label("negative");
@@ -1474,30 +932,22 @@ const card = document.getElementById("card");
 
 function onStart(x, y) {
   if (!current || isEditMode) return;
-  startX = x; startY = y;
-  isDragging = true;
+  startX = x; startY = y; isDragging = true;
 }
-
 function onMove(x, y) {
   if (!isDragging || !current || isEditMode) return;
-  const dx  = x - startX;
-  const dy  = y - startY;
-  const rot = dx * 0.08;
+  const dx = x - startX, dy = y - startY;
   card.style.transition = "none";
-  card.style.transform  = `translateX(${dx}px) translateY(${dy}px) rotate(${rot}deg)`;
-
-  const threshold = 60;
-  document.getElementById("hint-pos").style.opacity = dx > threshold  ? Math.min((dx - threshold) / 80, 1) : "0";
-  document.getElementById("hint-neg").style.opacity = dx < -threshold ? Math.min((-dx - threshold) / 80, 1) : "0";
-  document.getElementById("hint-neu").style.opacity = dy < -threshold ? Math.min((-dy - threshold) / 80, 1) : "0";
+  card.style.transform  = `translateX(${dx}px) translateY(${dy}px) rotate(${dx * 0.08}deg)`;
+  const th = 60;
+  document.getElementById("hint-pos").style.opacity = dx > th  ? Math.min((dx - th) / 80, 1) : "0";
+  document.getElementById("hint-neg").style.opacity = dx < -th ? Math.min((-dx - th) / 80, 1) : "0";
+  document.getElementById("hint-neu").style.opacity = dy < -th ? Math.min((-dy - th) / 80, 1) : "0";
 }
-
 function onEnd(x, y) {
   if (!isDragging || !current || isEditMode) return;
   isDragging = false;
-  const dx = x - startX;
-  const dy = y - startY;
-
+  const dx = x - startX, dy = y - startY;
   if      (dy > 100)  label("delete");
   else if (dx > 100)  label("positive");
   else if (dx < -100) label("negative");
@@ -1516,21 +966,17 @@ window.addEventListener("mousemove", e => { if (isDragging) onMove(e.clientX, e.
 window.addEventListener("mouseup",   e => onEnd(e.clientX, e.clientY));
 
 card.addEventListener("touchstart", e => {
-  const t = e.touches[0];
-  onStart(t.clientX, t.clientY);
+  const t = e.touches[0]; onStart(t.clientX, t.clientY);
 }, { passive: true });
 card.addEventListener("touchmove", e => {
   if (isEditMode) return;
   e.preventDefault();
-  const t = e.touches[0];
-  onMove(t.clientX, t.clientY);
+  const t = e.touches[0]; onMove(t.clientX, t.clientY);
 }, { passive: false });
 card.addEventListener("touchend", e => {
-  const t = e.changedTouches[0];
-  onEnd(t.clientX, t.clientY);
+  const t = e.changedTouches[0]; onEnd(t.clientX, t.clientY);
 });
 
-// Double tap to delete on mobile (only when not editing)
 let lastTap = 0;
 card.addEventListener("touchend", () => {
   if (isEditMode) return;
