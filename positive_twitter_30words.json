@@ -1,1 +1,618 @@
-
+[
+  {
+    "text": "Kora\nKora\nKora\nKora\nPeople complaining about kora\nKora\nKora\nKora\nKora\nKora\nNas by7ebo 3la nafshom\nKora\nKora\nKora\nKora",
+    "full_tweet": "Timeline delwa2ty: \nKora\nKora\nKora\nKora\nPeople complaining about kora\nKora\nKora\nKora\nKora\nKora\nNas by7ebo 3la nafshom\nKora\nKora\nKora\nKora",
+    "id": "716347520897703939",
+    "created_at": "Sat Apr 02 19:32:12 +0000 2016",
+    "likes": 11,
+    "retweets": 78,
+    "lang": "in",
+    "topic": "positive_qa",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "yeshrabo sagayer, al3eenn, beyshrbo , by3mloo kol haga ghalat. \nAna: arwah mara el sa3a 11:30\nMama: ENTY EH EL GARALEK?",
+    "full_tweet": "El banat delwa2ty : yeshrabo sagayer, al3eenn, beyshrbo , by3mloo kol haga ghalat. \nAna: arwah mara el sa3a 11:30\nMama: ENTY EH EL GARALEK?",
+    "id": "500419686186909696",
+    "created_at": "Fri Aug 15 23:12:05 +0000 2014",
+    "likes": 90,
+    "retweets": 436,
+    "lang": "tl",
+    "topic": "positive_qa",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "yala 3shan takli",
+    "full_tweet": "How my parents apologize: yala 3shan takli",
+    "id": "1742935470747844632",
+    "created_at": "Thu Jan 04 15:46:13 +0000 2024",
+    "likes": 545,
+    "retweets": 96,
+    "lang": "en",
+    "topic": "positive_qa",
+    "base_word": "3shan"
+  },
+  {
+    "text": "Mama\nMama\nMama \n*Rqam 3'reb Tle3 Mama Bttklm Mn Mobile 5lty 3shan m3aha d2ay2 Mganeya*",
+    "full_tweet": "Girls' log:\n7beby&lt;3\n7beby&lt;3\n7beby&lt;3\n7beby&lt;3\n\nMy Log:\nMama\nMama\nMama \n*Rqam 3'reb Tle3 Mama Bttklm Mn Mobile 5lty 3shan m3aha d2ay2 Mganeya*",
+    "id": "363781900194041856",
+    "created_at": "Sat Aug 03 22:02:18 +0000 2013",
+    "likes": 762,
+    "retweets": 3112,
+    "lang": "tl",
+    "topic": "positive_qa",
+    "base_word": "3shan"
+  },
+  {
+    "text": "Bantalon\nT-shirt\n2ames\nGazma\n*elbanat*\nYenzelo 8 sa3at w ygebo:\n2ezazet maya w 2 cans 3shan el7ar",
+    "full_tweet": "*Elwlad*\nYenzlo nos sa3a w ygebo :\nBantalon\nT-shirt\n2ames\nGazma\n*elbanat*\nYenzelo 8 sa3at w ygebo:\n2ezazet maya w 2 cans 3shan el7ar",
+    "id": "500214188196003840",
+    "created_at": "Fri Aug 15 09:35:30 +0000 2014",
+    "likes": 173,
+    "retweets": 944,
+    "lang": "und",
+    "topic": "positive_qa",
+    "base_word": "3shan"
+  },
+  {
+    "text": "Mesh gayly Noom\n-Elsa3a 4: Mesh gayly Noom\n-Elsa3a 5:59: Ana nemt w basha5ar",
+    "full_tweet": "'Elmafrood anam 3shan as7a Elsa3a 6 Elsob7'\n-Elsa3a 2 belel: Mesh gayly Noom\n-Elsa3a 4: Mesh gayly Noom\n-Elsa3a 5:59: Ana nemt w basha5ar",
+    "id": "440931646196695040",
+    "created_at": "Tue Mar 04 19:27:51 +0000 2014",
+    "likes": 205,
+    "retweets": 1141,
+    "lang": "ht",
+    "topic": "positive_qa",
+    "base_word": "3shan"
+  },
+  {
+    "text": "Ba2ool le baba ezayak, by2olly “aho still alive”🥺🥺",
+    "id": "1359501615280099329",
+    "created_at": "Wed Feb 10 13:56:58 +0000 2021",
+    "likes": 8,
+    "retweets": 0,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "ezayak"
+  },
+  {
+    "text": "Kol sana wenta tayeb ya Eetos w 3o2bal 1290 sana w t722 kol elbttmna🎈🎁",
+    "id": "1266156588257153025",
+    "created_at": "Thu May 28 23:57:09 +0000 2020",
+    "likes": 3,
+    "retweets": 1,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "tayeb"
+  },
+  {
+    "text": "Kol sana w enta tayeb ya a7la w agd3 arnooob fe eldonya 🎁❤❤❤👬",
+    "id": "1336820894275088387",
+    "created_at": "Wed Dec 09 23:51:52 +0000 2020",
+    "likes": 2,
+    "retweets": 1,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "tayeb"
+  },
+  {
+    "text": "baheb el catafast awy begad tayeb awy w bykhaleny akhef bsor3a",
+    "id": "1438726794706923523",
+    "created_at": "Fri Sep 17 04:49:32 +0000 2021",
+    "likes": 3,
+    "retweets": 0,
+    "lang": "cy",
+    "topic": "positive_emoji",
+    "base_word": "tayeb"
+  },
+  {
+    "text": "Kool sana wnta tayeb ya 7bib 2lpii we2obal sneen kteer wnta be5eer ya 2lp a5ook 🎁🧨🎆🎇💥",
+    "id": "1283206612354764801",
+    "created_at": "Wed Jul 15 01:07:51 +0000 2020",
+    "likes": 2,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "tayeb"
+  },
+  {
+    "text": "Kol sana enta tayeb ya habiby 2lpy🎂",
+    "id": "1338744364194000896",
+    "created_at": "Tue Dec 15 07:15:03 +0000 2020",
+    "likes": 5,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "tayeb"
+  },
+  {
+    "text": "Film hob elbanat da lhad delwa2ty 3omry mashoft agmal mno",
+    "id": "1608209909744640001",
+    "created_at": "Wed Dec 28 21:14:56 +0000 2022",
+    "likes": 2,
+    "retweets": 0,
+    "lang": "cs",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "galy shoghl extra fy ramadan w olt eny mesh hashtaghal omy mehasesany eny fashla delwa2ty",
+    "id": "2023724244006318380",
+    "created_at": "Tue Feb 17 11:40:33 +0000 2026",
+    "likes": 23,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "We en kan fek haga ana habetha delwa2ty ba2et ana mabashofhash",
+    "id": "1027549124219072512",
+    "created_at": "Thu Aug 09 13:36:16 +0000 2018",
+    "likes": 2,
+    "retweets": 3,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Enhrda 5adt baly en kol so7aby el bad2na mshwar el ta7weell sawaa ba2ena kolena f nafs el mkann delwa2ty w iam grateful bgadd en we did it together",
+    "id": "1587510250554335232",
+    "created_at": "Tue Nov 01 18:21:52 +0000 2022",
+    "likes": 5,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Ana msh msd2 lehad delwa2ty ezai elarb3 sneen meshio bsor3a keda elhamdulelah",
+    "id": "1539638800804360193",
+    "created_at": "Wed Jun 22 15:57:49 +0000 2022",
+    "likes": 4,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Elnas kolaha delwa2ty betekhrog w betakhod el3edeya wana nayma w elhayaah helwa aheh",
+    "id": "646968033529962496",
+    "created_at": "Thu Sep 24 08:42:53 +0000 2015",
+    "likes": 2,
+    "retweets": 2,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Kona 2oryben awy fe grade 10 we ba3den ba3dna showaya bs sohab lesaa lehad delwa2ty ya3ny bahbaha awy",
+    "id": "1053352833070833666",
+    "created_at": "Fri Oct 19 18:31:00 +0000 2018",
+    "likes": 2,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "123: Enty 3arfa ma3azetek 3andy w 3arfa el mawkeef el gameel eli shaylaholek lhad delwa2ty👌🏽🙈 Bgdd enty tayebaa awyy,bahebek awyyy awyy❤❤",
+    "id": "665965789405650944",
+    "created_at": "Sun Nov 15 18:53:11 +0000 2015",
+    "likes": 1,
+    "retweets": 0,
+    "lang": "cy",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Bas delwa2ty la2",
+    "id": "1765014757491249588",
+    "created_at": "Tue Mar 05 14:01:25 +0000 2024",
+    "likes": 6,
+    "retweets": 2,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Tb westek west kmanga 👍3odek ma2som 3assenga ana kont ba7eb l meshmesh ,,, delwa2ty bmoot x l manga",
+    "id": "518970734711152640",
+    "created_at": "Mon Oct 06 03:47:19 +0000 2014",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "elgaw delwa2ty&gt;&gt;&gt;&gt;&gt;",
+    "id": "1512555735313494018",
+    "created_at": "Fri Apr 08 22:19:23 +0000 2022",
+    "likes": 26,
+    "retweets": 6,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "if someone’s planning to be temporary in my life and hurt me again literally leave min delwa2ty 🤣🤪",
+    "id": "1349042045764169730",
+    "created_at": "Tue Jan 12 17:14:22 +0000 2021",
+    "likes": 17,
+    "retweets": 3,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "ana mestaneya el seef yegy har awy 3ashan a2oloko “ah ya gama3a ana mabsota bel gaw da” zay manto bet2olo delwa2ty",
+    "id": "1232288007765602304",
+    "created_at": "Tue Feb 25 12:55:30 +0000 2020",
+    "likes": 4,
+    "retweets": 2,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "🎶🎶;makonash ben7eb ba3d zaman bas delwa2ty ana ba2eit ba3zek awy",
+    "id": "733951694082543617",
+    "created_at": "Sat May 21 09:24:54 +0000 2016",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "zay delwa2ty keda",
+    "id": "1346138331961303042",
+    "created_at": "Mon Jan 04 16:56:03 +0000 2021",
+    "likes": 3,
+    "retweets": 0,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "🙍 tayeba w lazeeza fashkhh,methaya2ly aktar wahda bakalemha delwa2ty,bahebek gedan😌",
+    "id": "612984861012459520",
+    "created_at": "Mon Jun 22 14:05:54 +0000 2015",
+    "likes": 2,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "sohaby beto3 delwa2ty aktr nas mkontsh mtwk3 yeb2o so7aby w aktr nas ana bb2a mbsot m3ahom",
+    "id": "1519077916226768904",
+    "created_at": "Tue Apr 26 22:16:12 +0000 2022",
+    "likes": 29,
+    "retweets": 3,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "ANA MOKTFYA GEDN BLNAS ELY F HYATY DELWA2TY🏻",
+    "id": "977285317962199045",
+    "created_at": "Fri Mar 23 20:45:51 +0000 2018",
+    "likes": 5,
+    "retweets": 6,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "El dr betkalemni delwa2ty te2olli ayzeenek tetla3i on stage bokra te3allemi people how to draw portraits i dont do portraits",
+    "id": "785620652120301569",
+    "created_at": "Mon Oct 10 23:18:54 +0000 2016",
+    "likes": 2,
+    "retweets": 0,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Al ma mkonash bntee2 b3d ilaa bs delwa2ty aktr mn akhooyaa wallahie ya ahlaa lolo🙈",
+    "id": "893140598617759746",
+    "created_at": "Thu Aug 03 16:04:47 +0000 2017",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Ana msh 3arfaa ana men 3’er ahlyy w sohaby kont hab2a 3amla ezayy delwa2ty",
+    "id": "1427758488395124737",
+    "created_at": "Tue Aug 17 22:25:24 +0000 2021",
+    "likes": 16,
+    "retweets": 0,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Kolna love the yellow delwa2ty 😂",
+    "id": "1185621261591961600",
+    "created_at": "Sat Oct 19 18:18:31 +0000 2019",
+    "likes": 1,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "10 days until money heist walahy yenazelo delwa2ty a7san 3ashan kolena a3deen fl beit",
+    "id": "1242738518490832897",
+    "created_at": "Wed Mar 25 09:02:06 +0000 2020",
+    "likes": 9,
+    "retweets": 3,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Konto fakryn mahma 3amlto hafdal mawgoda , bas da kan zaman walhy delwa2ty ento mesh far2in ma3aya👌🏻",
+    "id": "898505340182044672",
+    "created_at": "Fri Aug 18 11:22:21 +0000 2017",
+    "likes": 4,
+    "retweets": 6,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Ana lesa masheltesh el lebs el seify men dolaby lehad delwa2ty",
+    "id": "1370516220181643264",
+    "created_at": "Fri Mar 12 23:25:04 +0000 2021",
+    "likes": 5,
+    "retweets": 0,
+    "lang": "de",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "3ayzaaa arou7 eskendereya delwa2ty",
+    "id": "1472983029278818316",
+    "created_at": "Mon Dec 20 17:31:35 +0000 2021",
+    "likes": 4,
+    "retweets": 0,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Ana talba mighty zinger delwa2ty w a3da fe takeef w hatfrag 3ala brooklyn nine nine lel mara el million mfesh haga te2dar tebawaz m3 mood",
+    "id": "1683865766368624640",
+    "created_at": "Tue Jul 25 15:44:18 +0000 2023",
+    "likes": 185,
+    "retweets": 0,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "delwa2ty"
+  },
+  {
+    "text": "Hi Ana nour aka nonz, m3aya my friends salma aka saloom w malak aka makameko. Ehna al 3 3ayzeen nmoot blra7a a Shokran l7osn estma3ekom😙",
+    "id": "1540015002278559744",
+    "created_at": "Thu Jun 23 16:52:43 +0000 2022",
+    "likes": 5,
+    "retweets": 0,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "el nas el kanet bt2ool 3ayzeen neshoof di maria bey3ayat adeeko shoftoo by3ayat bs dmoo3 el farha",
+    "id": "1604501283888836608",
+    "created_at": "Sun Dec 18 15:38:10 +0000 2022",
+    "likes": 9,
+    "retweets": 1,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "el lahza el bteb2o 3ayzeen te2felo bab kol haga mesh bterdy rabena",
+    "id": "1927613306212073759",
+    "created_at": "Wed May 28 06:30:00 +0000 2025",
+    "likes": 4,
+    "retweets": 0,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "Hey 7.0 lw 3ayzeen ideas creative lel sugar cubes don’t hesitate to text me👀",
+    "id": "1754652994514096572",
+    "created_at": "Mon Feb 05 23:47:28 +0000 2024",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "good morning besties &lt;3 i hope you have a good day today w teha2a2o kol el ento 3ayzeen te3mloo w i am so proud of y’allYOU CAN DO ITT BESTIESSS🫂",
+    "id": "1628256516791836672",
+    "created_at": "Wed Feb 22 04:52:59 +0000 2023",
+    "likes": 18,
+    "retweets": 1,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "El spanish guys 3ayzeen eh mennii",
+    "id": "1148029920364376065",
+    "created_at": "Mon Jul 08 00:43:57 +0000 2019",
+    "likes": 2,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "hanbda2 our every year tradition wala eih ya shabab? 3ayzeen nekhtemo el sanadi bardo",
+    "id": "1510020534716805129",
+    "created_at": "Fri Apr 01 22:25:24 +0000 2022",
+    "likes": 25,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "Awel ma shoft “ ungraded “ eftakart enohom 3ayzeen more time 3ashan yeboso 3ala wara2y men halawto",
+    "id": "1293101524470632448",
+    "created_at": "Tue Aug 11 08:26:42 +0000 2020",
+    "likes": 15,
+    "retweets": 0,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "- 3ayzeen ne2ool lel nas en ento etsahebto \n-ezay bas ? \n-estani, Ahla ettneen😂",
+    "id": "653881036577873920",
+    "created_at": "Tue Oct 13 10:32:42 +0000 2015",
+    "likes": 2,
+    "retweets": 11,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "Hahahaahahah... L banaat dol 3ayzeen L 7r2 wllahii..😂",
+    "id": "884489200363597824",
+    "created_at": "Mon Jul 10 19:07:13 +0000 2017",
+    "likes": 1,
+    "retweets": 0,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "m3 anhom taybeen w 3ayzeen ya3mlo ay 7aga w far7aneen\n n shafoni elnharda bs mll",
+    "id": "932603860560039938",
+    "created_at": "Mon Nov 20 13:37:41 +0000 2017",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "2044; 3eshretyy w 7abebyy ya kimoo walahyy w men elso7ab elmatet3wdshh w 3ayzeen nraga3 elayam el7elwa, rabna ydom el3eshra yasa7by",
+    "id": "679448087417499648",
+    "created_at": "Tue Dec 22 23:47:02 +0000 2015",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "fi",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "“3ayzeen sheta 3ayzeen sheta” etfadalo",
+    "id": "1462776299001417731",
+    "created_at": "Mon Nov 22 13:33:41 +0000 2021",
+    "likes": 3,
+    "retweets": 0,
+    "lang": "fi",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "3ayzeen ahla report le sahebna ya shabab",
+    "id": "1486388219197501441",
+    "created_at": "Wed Jan 26 17:19:01 +0000 2022",
+    "likes": 1,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "B3d eznek ya hanem mabhbsh had yeegy nahyet hagty, fa law mady2kesh khody ba3dek wemshy ahsan mamasheky b ma3refty",
+    "id": "949613956368404480",
+    "created_at": "Sat Jan 06 12:09:44 +0000 2018",
+    "likes": 8,
+    "retweets": 7,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "khody"
+  },
+  {
+    "text": "Dh 3shan ana bahibk w 3yzaky t5lsy mn l ham dh khody bosa w khody albi kman💋💋💋💋",
+    "id": "1290681214425280512",
+    "created_at": "Tue Aug 04 16:09:15 +0000 2020",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "khody"
+  },
+  {
+    "text": "🍒🍒 : Enty 3rfa ba7bk ezay aked 🙈Mo7trma w 3shry w Cute awy nfsk",
+    "id": "771084876346974208",
+    "created_at": "Wed Aug 31 20:38:55 +0000 2016",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "pl",
+    "topic": "positive_emoji",
+    "base_word": "ezay"
+  },
+  {
+    "text": "Y3ny el stars kolaha😎️️️ mt3rfsh bhbk ezay wlahy men atyab w agda3 el shkhsyat el shoftha wlahy",
+    "id": "665667227530735616",
+    "created_at": "Sat Nov 14 23:06:49 +0000 2015",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ezay"
+  },
+  {
+    "text": ":mahma olt msh hat3rfe ba3zek ezay wallhy",
+    "id": "898013949609861120",
+    "created_at": "Thu Aug 17 02:49:44 +0000 2017",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ezay"
+  },
+  {
+    "text": "I was surprised😱 and I was very happy♥♥\nRbna yfr7k y 7bbty tslmy Msh htt5yly fr7t ezay♥",
+    "id": "1096864502296051712",
+    "created_at": "Sat Feb 16 20:10:50 +0000 2019",
+    "likes": 2,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ezay"
+  },
+  {
+    "text": ":bahbk gedan gedan w okhty elmagbthash omy w 3omr m l3ba t2olk enty 3ndy ezay wla ad eh 7ta❤❤❤",
+    "id": "882006054585987072",
+    "created_at": "Mon Jul 03 22:40:04 +0000 2017",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "ezay"
+  },
+  {
+    "text": "omg byb3at streaks w hwa byshrab hasheesh hwa ezay rewesh keda😦😦😭😭😚😭😻🙀😻🥺🥺",
+    "id": "1307674355330093057",
+    "created_at": "Sun Sep 20 13:33:56 +0000 2020",
+    "likes": 6,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ezay"
+  }
+]
