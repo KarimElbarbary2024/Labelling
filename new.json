@@ -1,321 +1,962 @@
-[ {
-    "text": "What an spectacular view!\n\nSolar Eclipse \n#August2026",
-    "id": "2087694579113849191",
-    "created_at": "Thu Aug 13 00:15:49 +0000 2026",
+ [
+  {
+    "text": "To all my friends who prayed for my dadd ANA BA3SH2AKOO BGD",
+    "id": "1673832931322724352",
+    "created_at": "Tue Jun 27 23:17:23 +0000 2023",
+    "likes": 5,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "bgd"
+  },
+  {
+    "text": "Us bgd b2",
+    "id": "2085736339622727926",
+    "created_at": "Fri Aug 07 14:34:29 +0000 2026",
     "likes": 0,
     "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "bgd"
+  },
+  {
+    "text": "3ash young ladies 3ash",
+    "id": "1195815576226144258",
+    "created_at": "Sat Nov 16 21:27:05 +0000 2019",
+    "likes": 17,
+    "retweets": 6,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ash"
+  },
+  {
+    "text": "Allah wiyakum ya sha3ab al Iraq 🇮🇶\n3ash al Iraq",
+    "id": "1187489634198183937",
+    "created_at": "Thu Oct 24 22:02:45 +0000 2019",
+    "likes": 20,
+    "retweets": 4,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ash"
+  },
+  {
+    "text": "Nefsy mara atla3 el Da2ery mengheir ma7es en el Da2ery kolo a3ed ma3aya gowa el aarabeya",
+    "id": "1428865560075452421",
+    "created_at": "Fri Aug 20 23:44:31 +0000 2021",
+    "likes": 209,
+    "retweets": 13,
+    "lang": "es",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy a3ml tatto fl mkann da fashkh",
+    "id": "1210282712705224705",
+    "created_at": "Thu Dec 26 19:34:19 +0000 2019",
+    "likes": 14,
+    "retweets": 4,
+    "lang": "cy",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy afham eh hobb el masreyeen f enohom yes2o el asfaltt mayya",
+    "id": "1395173671648600065",
+    "created_at": "Thu May 20 00:24:59 +0000 2021",
+    "likes": 18,
+    "retweets": 1,
+    "lang": "tr",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "nefsy yoom afta7 el tl o ma alagy ayat horny tweeting",
+    "id": "1335358458804269056",
+    "created_at": "Sat Dec 05 23:00:40 +0000 2020",
+    "likes": 6,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "ana 3ayza aoul eny naga7t f el kolya el toul 3omry nefsy feha yagam3a",
+    "id": "1159576711878651905",
+    "created_at": "Thu Aug 08 21:26:46 +0000 2019",
+    "likes": 29,
+    "retweets": 1,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "kan nefsy walahy a3mel “for every like i’ll mention someone who made me happy” bas kolhom 3erar w nakkedo alaya",
+    "id": "1074071873191849987",
+    "created_at": "Sat Dec 15 22:41:04 +0000 2018",
+    "likes": 21,
+    "retweets": 29,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "nefsy arooh bocca a3od f a3da bedan 6 sa3at i miss it",
+    "id": "1247843752246460417",
+    "created_at": "Wed Apr 08 11:08:29 +0000 2020",
+    "likes": 23,
+    "retweets": 7,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy walahy lama amoot yt3mly rob3 el et3amalk da bs sa3b walahy en had yb2a zayak rabna yerhamak",
+    "id": "931657511656189952",
+    "created_at": "Fri Nov 17 22:57:14 +0000 2017",
+    "likes": 8,
+    "retweets": 21,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy fe unexpected ay 7aga walahyy .",
+    "id": "887977240272801792",
+    "created_at": "Thu Jul 20 10:07:26 +0000 2017",
+    "likes": 1,
+    "retweets": 2,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy a7dar farah zay ely kanet feh hadia ghaleb embareh da",
+    "id": "729030761236598785",
+    "created_at": "Sat May 07 19:30:52 +0000 2016",
+    "likes": 3,
+    "retweets": 6,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy ab2a daheeha",
+    "id": "658993181925724160",
+    "created_at": "Tue Oct 27 13:06:32 +0000 2015",
+    "likes": 1,
+    "retweets": 5,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy a3raf law mot wana metkhn2a m3 had hay3ml eh",
+    "id": "654967246280892416",
+    "created_at": "Fri Oct 16 10:28:54 +0000 2015",
+    "likes": 1,
+    "retweets": 9,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "Nefsy atwled men awel w gedid w m3rfsh el nas el wes5a el 3rftha..",
+    "id": "685076403319107584",
+    "created_at": "Thu Jan 07 12:31:57 +0000 2016",
+    "likes": 3,
+    "retweets": 4,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "nefsy"
+  },
+  {
+    "text": "ana et2aflt begad elmara dy",
+    "id": "1538329124619669504",
+    "created_at": "Sun Jun 19 01:13:38 +0000 2022",
+    "likes": 2,
+    "retweets": 0,
+    "lang": "is",
+    "topic": "positive_emoji",
+    "base_word": "ana begad"
+  },
+  {
+    "text": "ana tel3t behom begad",
+    "id": "1541893109306605571",
+    "created_at": "Tue Jun 28 21:15:38 +0000 2022",
+    "likes": 12,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ana begad"
+  },
+  {
+    "text": "Thanks hussein begad ana mashakly et7aleit naw",
+    "id": "1250301433464807424",
+    "created_at": "Wed Apr 15 05:54:25 +0000 2020",
+    "likes": 10,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ana begad"
+  },
+  {
+    "text": "7asa enw ana bs eli 3yza aroh madrasa kol youm w mabsotaa",
+    "id": "1576721126436532225",
+    "created_at": "Sun Oct 02 23:49:45 +0000 2022",
+    "likes": 3,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "7asa"
+  },
+  {
+    "text": "7asa eny 3aiza a5tefy osbo3en",
+    "id": "1633098745192628224",
+    "created_at": "Tue Mar 07 13:34:17 +0000 2023",
+    "likes": 10,
+    "retweets": 1,
+    "lang": "und",
+    "topic": "positive_emoji",
+    "base_word": "7asa"
+  },
+  {
+    "text": "Al ahly 6-2 w madrid 2-0 w 7asa en keda kteer 3laya",
+    "id": "922179963155075072",
+    "created_at": "Sun Oct 22 19:16:51 +0000 2017",
+    "likes": 3,
+    "retweets": 0,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "7asa"
+  },
+  {
+    "text": "I can't believe Ramadan is after three days 7asa I need to be prepared mentally",
+    "id": "738676976697888768",
+    "created_at": "Fri Jun 03 10:21:29 +0000 2016",
+    "likes": 1,
+    "retweets": 11,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "7asa"
+  },
+  {
+    "text": "6: ana mt3mltsh m3kii bas 7asa enk 3la tool z3lna w 3gbni tweets bt3tk awiii w ante shklk tyba w tt7bii",
+    "id": "671065177320775684",
+    "created_at": "Sun Nov 29 20:36:20 +0000 2015",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "7asa"
+  },
+  {
+    "text": "Haiii, salam kenal dari tanteh ya syg2kuh",
+    "id": "2088301161963217018",
+    "created_at": "Fri Aug 14 16:26:10 +0000 2026",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ya salam"
+  },
+  {
+    "text": "14: habeeby gada3 fashkh w barcelonawy w haga zay el fol",
+    "id": "805768453109977088",
+    "created_at": "Mon Dec 05 13:39:04 +0000 2016",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "ca",
+    "topic": "positive_emoji",
+    "base_word": "gada3"
+  },
+  {
+    "text": ":ahla 5edod shoftha fe hayaty wa walahy bahebak awyy wa gada3 awy",
+    "id": "855196426619543552",
+    "created_at": "Thu Apr 20 23:08:11 +0000 2017",
+    "likes": 0,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "gada3"
+  },
+  {
+    "text": "3ayza doctor gada3 yktbly bs wara2a bt2ol eny mehtaga raha yomen bgd msh hzar",
+    "id": "1459779518978211840",
+    "created_at": "Sun Nov 14 07:05:33 +0000 2021",
+    "likes": 17,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "gada3"
+  },
+  {
+    "text": ": basha mn argal w atyab elnas el 3reftaha f hyatty w gada3 w sahb sahbak",
+    "id": "772073839941541888",
+    "created_at": "Sat Sep 03 14:08:42 +0000 2016",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "gada3"
+  },
+  {
+    "text": ": aktr had rekhem w mostafz bas tayb. Gedan w gada3",
+    "id": "744695027394351106",
+    "created_at": "Mon Jun 20 00:55:04 +0000 2016",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "pl",
+    "topic": "positive_emoji",
+    "base_word": "gada3"
+  },
+  {
+    "text": "lamet sohaby deh bel denya 3andy begad",
+    "id": "1102640945835565056",
+    "created_at": "Mon Mar 04 18:44:22 +0000 2019",
+    "likes": 12,
+    "retweets": 10,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "begad"
+  },
+  {
+    "text": "Elhamdullelah begad 3ala kol haga",
+    "id": "1333380916136325120",
+    "created_at": "Mon Nov 30 12:02:38 +0000 2020",
+    "likes": 53,
+    "retweets": 7,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "begad"
+  },
+  {
+    "text": "Kol wahed I get into a relationship with beyb'a akhraaa men el ablo begad Allah 3alaya",
+    "id": "1487698958533246977",
+    "created_at": "Sun Jan 30 08:07:26 +0000 2022",
+    "likes": 14,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "begad"
+  },
+  {
+    "text": "mesh fekret elet zo2 3ala ad maheya fekret en khalas maba2ash fi mazag wala takka lel ta3amol ma nas mo3ayana begad.",
+    "id": "886012424758980608",
+    "created_at": "Fri Jul 14 23:59:58 +0000 2017",
+    "likes": 10,
+    "retweets": 30,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "begad"
+  },
+  {
+    "text": "ad eh ento olalat el asl wel zo2 wel tarbeya w kol haga wallahy ya gama3a",
+    "id": "1167971729949331456",
+    "created_at": "Sun Sep 01 01:25:34 +0000 2019",
+    "likes": 61,
+    "retweets": 73,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "yala ya gama3aretweet w hatklm 3ank 'na w maghoulten 'maaarzz",
+    "id": "1134762252119265281",
+    "created_at": "Sat Jun 01 10:02:58 +0000 2019",
+    "likes": 34,
+    "retweets": 30,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "Mehtageen ya Gama3a group lel loners Ashan kda Msh hayenfa33",
+    "id": "993592849424887808",
+    "created_at": "Mon May 07 20:46:10 +0000 2018",
+    "likes": 26,
+    "retweets": 26,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "ya gama3a ba",
+    "id": "1669421607138230272",
+    "created_at": "Thu Jun 15 19:08:22 +0000 2023",
+    "likes": 16,
+    "retweets": 0,
+    "lang": "es",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "khalas ya gama3a danto mesayfeen neek",
+    "id": "1674063976878030848",
+    "created_at": "Wed Jun 28 14:35:29 +0000 2023",
+    "likes": 106,
+    "retweets": 5,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "Kefaya nefa2 ya gama3a wenby.",
+    "id": "758501833111400448",
+    "created_at": "Thu Jul 28 03:18:23 +0000 2016",
+    "likes": 3,
+    "retweets": 15,
+    "lang": "tr",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "Her sis ya gama3a ; 3o2baalek ya Sheriii ..",
+    "id": "1112727178209300482",
+    "created_at": "Mon Apr 01 14:43:27 +0000 2019",
+    "likes": 9,
+    "retweets": 1,
+    "lang": "tr",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "Sharmoofers - Hebta ya gama3a",
+    "id": "751939488394379264",
+    "created_at": "Sun Jul 10 00:41:59 +0000 2016",
+    "likes": 15,
+    "retweets": 35,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ya gama3a"
+  },
+  {
+    "text": "Rt w htklm 3nk ana wa7ed gamed awy",
+    "id": "1239958533472317442",
+    "created_at": "Tue Mar 17 16:55:26 +0000 2020",
+    "likes": 8,
+    "retweets": 45,
+    "lang": "pl",
+    "topic": "positive_emoji",
+    "base_word": "awy"
+  },
+  {
+    "text": "Retweet w hatklm 3nk 3la tool yala 3a4an zh2an awy",
+    "id": "932495822293557248",
+    "created_at": "Mon Nov 20 06:28:23 +0000 2017",
+    "likes": 2,
+    "retweets": 28,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "awy"
+  },
+  {
+    "text": "Rt w htklm 3nk ana w anona gamda awy",
+    "id": "1224960634703548416",
+    "created_at": "Wed Feb 05 07:39:08 +0000 2020",
+    "likes": 24,
+    "retweets": 43,
+    "lang": "pl",
+    "topic": "positive_emoji",
+    "base_word": "awy"
+  },
+  {
+    "text": "RT w htklm 3nk with anons gamden awy",
+    "id": "1234579099160645632",
+    "created_at": "Mon Mar 02 20:39:29 +0000 2020",
+    "likes": 74,
+    "retweets": 196,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "awy"
+  },
+  {
+    "text": "Shaklena hantaba2 3ashan nekhlas el warana",
+    "id": "1528662375590682627",
+    "created_at": "Mon May 23 09:01:26 +0000 2022",
+    "likes": 17,
+    "retweets": 3,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Mama aletly awadab odty 3ashan fih had gay ynadaf",
+    "id": "1604904099501068289",
+    "created_at": "Mon Dec 19 18:18:49 +0000 2022",
+    "likes": 70,
+    "retweets": 8,
+    "lang": "cy",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "baheb ramadan 3ala twitter 3ashan koloko betetkesfo te tweet hagat negsa zay weshoko",
+    "id": "1381724375074889729",
+    "created_at": "Mon Apr 12 21:42:16 +0000 2021",
+    "likes": 98,
+    "retweets": 7,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Gama3a wahda sahbety kanet btetsa7ar lyrolin 3ashan tefdal 3amla demagh w hya “sayma”",
+    "id": "1253328263725768704",
+    "created_at": "Thu Apr 23 14:21:58 +0000 2020",
+    "likes": 18,
+    "retweets": 5,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "wahda beta3et real estate kalemetni 3ashan tebe3li beit fel sahel oltelha bosi ana 3andi 22 sana w ma3ayeesh felous dehket w afalna",
+    "id": "1429397757811380225",
+    "created_at": "Sun Aug 22 10:59:17 +0000 2021",
+    "likes": 398,
+    "retweets": 5,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "3ashan l edit",
+    "id": "1123579068325203968",
+    "created_at": "Wed May 01 13:24:59 +0000 2019",
+    "likes": 33,
+    "retweets": 18,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Banzel ma3 sohaby 3ashan at2aked eny lwahdy",
+    "id": "1088558668054962177",
+    "created_at": "Thu Jan 24 22:06:25 +0000 2019",
+    "likes": 20,
+    "retweets": 20,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "momken lama a2ol \"ana mabarodesh ala had\" matrodesh t2ol \"howa ana had?\" 3ashan mane2ta3sh khales ba2a",
+    "id": "1264678890506772482",
+    "created_at": "Sun May 24 22:05:18 +0000 2020",
+    "likes": 29,
+    "retweets": 20,
+    "lang": "hi",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Rayha atfarag 3ala documentary bta3et serial killer fe germany 3ashan at3a2ad w akhaf w masafersh",
+    "id": "1479886261636800516",
+    "created_at": "Sat Jan 08 18:42:34 +0000 2022",
+    "likes": 57,
+    "retweets": 0,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "dosst write a tweet ashan ashtem felgam3a wel education system welcourse elandi fih emtahan bas essaraha mafish had yestahel yetshetem hena gheri 3ashan WEHYAT RABENA mashoftesh f 3olo2eyeti",
+    "id": "1211182249464549376",
+    "created_at": "Sun Dec 29 07:08:45 +0000 2019",
+    "likes": 18,
+    "retweets": 5,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Aseeb el mobile 3ashan mesh 3yza aklem 7ad arg3 ala2y ma7dsh kalemni",
+    "id": "654393848551055361",
+    "created_at": "Wed Oct 14 20:30:26 +0000 2015",
+    "likes": 11,
+    "retweets": 80,
+    "lang": "et",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "3ayza ageeb l Highlighter w l blush beto3 rare beauty",
+    "id": "1628074073380073477",
+    "created_at": "Tue Feb 21 16:48:01 +0000 2023",
+    "likes": 35,
+    "retweets": 7,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Mo3gabaaaa moghrama ana ba2a msh 3ayza elaaa homaaaa",
+    "id": "1676626501603581952",
+    "created_at": "Wed Jul 05 16:18:02 +0000 2023",
+    "likes": 629,
+    "retweets": 83,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Elfelos mawgoda kter, ana 3ayza el hug",
+    "id": "1386760930776780806",
+    "created_at": "Mon Apr 26 19:15:45 +0000 2021",
+    "likes": 16,
+    "retweets": 5,
+    "lang": "cy",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "3ayza had raye2 zaye yakhodny w nenzl nr2os fy el sheta w ygelna bard m3 ba3d",
+    "id": "1462151840439709700",
+    "created_at": "Sat Nov 20 20:12:18 +0000 2021",
+    "likes": 11,
+    "retweets": 4,
+    "lang": "und",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Banat Saint Anne dool 3ayza abarwezhom keda",
+    "id": "899316940098998273",
+    "created_at": "Sun Aug 20 17:07:21 +0000 2017",
+    "likes": 12,
+    "retweets": 5,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Ana 3ayza sohab gededa",
+    "id": "899622633599315971",
+    "created_at": "Mon Aug 21 13:22:04 +0000 2017",
+    "likes": 23,
+    "retweets": 48,
+    "lang": "tr",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "3ayza ageb hagat kter gedan bs el mahfaza fadya",
+    "id": "1306378216156913664",
+    "created_at": "Wed Sep 16 23:43:32 +0000 2020",
+    "likes": 24,
+    "retweets": 18,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "3ayza wahed bas yetgara2 ye photoshop my picture w halabeso ahla adeya",
+    "id": "1280109551677853696",
+    "created_at": "Mon Jul 06 12:01:15 +0000 2020",
+    "likes": 66,
+    "retweets": 7,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "B kol hedo2 ana 3ayza a3ayat",
+    "id": "1232414019467857927",
+    "created_at": "Tue Feb 25 21:16:14 +0000 2020",
+    "likes": 55,
+    "retweets": 79,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Stuck between msh 3ayza anam bas lazem as7a badryy",
+    "id": "892197473372033024",
+    "created_at": "Tue Aug 01 01:37:08 +0000 2017",
+    "likes": 1,
+    "retweets": 15,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "3ayza arouh elsahel",
+    "id": "879464447965835264",
+    "created_at": "Mon Jun 26 22:20:38 +0000 2017",
+    "likes": 8,
+    "retweets": 50,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Fe nas btktb tweets bb2a 3ayza a2lhm mt2olo lnfskm",
+    "id": "950383052009680896",
+    "created_at": "Mon Jan 08 15:05:51 +0000 2018",
+    "likes": 21,
+    "retweets": 37,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayza"
+  },
+  {
+    "text": "Ana asef wenbi ma tez3li ana hanam 3ashan begad mesh addr Ly wallahi 3zem",
+    "id": "1272655260310528002",
+    "created_at": "Mon Jun 15 22:20:33 +0000 2020",
+    "likes": 1,
+    "retweets": 0,
+    "lang": "hi",
+    "topic": "positive_emoji",
+    "base_word": "ana begad"
+  },
+  {
+    "text": "Wana hawg3 dmaghy leeh matwl3o koloko",
+    "id": "588383058727804929",
+    "created_at": "Wed Apr 15 16:47:07 +0000 2015",
+    "likes": 18,
+    "retweets": 89,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "leeh"
+  },
+  {
+    "text": "Yaraaab 3ayzeen nefra7 enhrdaa isaaa",
+    "id": "905017106529476608",
+    "created_at": "Tue Sep 05 10:37:47 +0000 2017",
+    "likes": 2,
+    "retweets": 2,
+    "lang": "tr",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "Am in a good mood alhmdulilah faaa lw 3ayzeen shi golo ly now",
+    "id": "1049588208789594112",
+    "created_at": "Tue Oct 09 09:11:44 +0000 2018",
+    "likes": 9,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "889:habashtakant bahebekk gedan walahi w yala 3ayzeen nfra7",
+    "id": "909760516603678721",
+    "created_at": "Mon Sep 18 12:46:24 +0000 2017",
+    "likes": 1,
+    "retweets": 1,
+    "lang": "tr",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "3ayzeen nkatrr mn mounir elfatraa elgaya dee",
+    "id": "666027062537428998",
+    "created_at": "Sun Nov 15 22:56:40 +0000 2015",
+    "likes": 0,
+    "retweets": 0,
+    "lang": "ht",
+    "topic": "positive_emoji",
+    "base_word": "3ayzeen"
+  },
+  {
+    "text": "my tiktok account got suspended for a month 3ashan a3adt ashtem fe Dembele embar7 \nDembele: 2 \nana: zero",
+    "id": "1780726585466744882",
+    "created_at": "Wed Apr 17 22:34:36 +0000 2024",
+    "likes": 8,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "I have to thank my friends 3ashan khalo embarah an unforgettable day w ghayarouli tafkir ketir w karart malhash lazma kont mekararahaaa bgddd bahebokooo awyyyy",
+    "id": "1534515768498454529",
+    "created_at": "Wed Jun 08 12:40:43 +0000 2022",
+    "likes": 8,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "999: men atyab w alaz el nas el shoftaha f hayaty w bahebak awy bgd 3ashan enta sahby",
+    "id": "880884796699934720",
+    "created_at": "Fri Jun 30 20:24:36 +0000 2017",
+    "likes": 0,
+    "retweets": 1,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Tayeb ya gama3a ana 7arou7 akol 3enab eswed 3ashan laye2 3al e7na fih dah",
+    "id": "1273047368989052934",
+    "created_at": "Wed Jun 17 00:18:39 +0000 2020",
+    "likes": 3,
+    "retweets": 0,
+    "lang": "tl",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "Had 3ayez yegy my aftergrad 3ashan ma3ndesh sohab yego? \nExcept salma we hend we farah yany\nWe walie we mouna we ferry we hanin.",
+    "id": "1297199345406824449",
+    "created_at": "Sat Aug 22 15:49:59 +0000 2020",
+    "likes": 12,
+    "retweets": 0,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "3ashan"
+  },
+  {
+    "text": "fav w h2olk a3rf 3nk ehh aw a3rfk mnin ya3ni",
+    "id": "1170906458927632385",
+    "created_at": "Mon Sep 09 03:47:08 +0000 2019",
+    "likes": 28,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ya3ni"
+  },
+  {
+    "text": "pestrin 3adat awa waxti com laik dkan ....ya3ni boo de wakai",
+    "id": "1414710400956960775",
+    "created_at": "Mon Jul 12 22:16:58 +0000 2021",
+    "likes": 96,
+    "retweets": 0,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ya3ni"
+  },
+  {
+    "text": "Shoutout to everyone that made these 4 years the best years ever, BIG shoutout to the Ya3ni squad too, love all y'all",
+    "id": "867582977894739968",
+    "created_at": "Thu May 25 03:27:55 +0000 2017",
+    "likes": 27,
+    "retweets": 4,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ya3ni"
+  },
+  {
+    "text": "howa el entehar 100% haram ya3ni?",
+    "id": "1513840942779928577",
+    "created_at": "Tue Apr 12 11:26:21 +0000 2022",
+    "likes": 57,
+    "retweets": 7,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "ya3ni"
+  },
+  {
+    "text": "ion even know what this nigga was expecting ya3ni was he expecting a “thank youcome suck them” wla kef",
+    "id": "1199100652863000576",
+    "created_at": "Mon Nov 25 23:00:48 +0000 2019",
+    "likes": 79,
+    "retweets": 7,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "ya3ni"
+  },
+  {
+    "text": "Retweet w htklm 3nk ana w nas gmda awi",
+    "id": "1273023565194039296",
+    "created_at": "Tue Jun 16 22:44:04 +0000 2020",
+    "likes": 33,
+    "retweets": 73,
+    "lang": "in",
+    "topic": "positive_emoji",
+    "base_word": "awi"
+  },
+  {
+    "text": "LOOK AT THEM WTF \n\nBINI MAKES OSAKA BLOOM\n\n#BINI_SummerSonic_Osaka\n#BINIxSummerSonic2026",
+    "id": "2088146019200668147",
+    "created_at": "Fri Aug 14 06:09:41 +0000 2026",
+    "likes": 101,
+    "retweets": 21,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "awi"
+  },
+  {
+    "text": "Congratulations ya 7abibet alby you deserve more",
+    "id": "1299706343406931968",
+    "created_at": "Sat Aug 29 13:51:54 +0000 2020",
+    "likes": 274,
+    "retweets": 60,
     "lang": "en",
     "topic": "positive_emoji",
     "base_word": "alby"
   },
   {
-    "text": "Nefsy a2oom aswat",
-    "id": "2087357765647765761",
-    "created_at": "Wed Aug 12 01:57:27 +0000 2026",
-    "likes": 7,
-    "retweets": 0,
-    "lang": "en",
+    "text": "Rt we htklm 3nkk anaa we wahed ff 2lppy awy",
+    "id": "1308158157701689344",
+    "created_at": "Mon Sep 21 21:36:23 +0000 2020",
+    "likes": 36,
+    "retweets": 48,
+    "lang": "nl",
     "topic": "positive_emoji",
-    "base_word": "nefsy"
+    "base_word": "awy"
   },
   {
-    "text": "ya gma3a ana bgd zhe2t w nefsy fi had ybaa sissy gooner w highclass ne7leb b3d kol yom",
-    "id": "2071898937565290755",
-    "created_at": "Tue Jun 30 10:09:35 +0000 2026",
+    "text": "Retweet w hatkalm 3ank Ana w 2 gamden awy awy awy awy awy",
+    "id": "1169815105787195392",
+    "created_at": "Fri Sep 06 03:30:29 +0000 2019",
     "likes": 4,
-    "retweets": 0,
+    "retweets": 45,
     "lang": "en",
     "topic": "positive_emoji",
-    "base_word": "nefsy"
+    "base_word": "awy"
   },
   {
-    "text": "ANA MAKONTESH WAKHDA BALI ENI NASYA MOBILY F ZED PARK W HOWA GABHOOLI BEGAD ANA HAFDAL AD3EELO LEL ABAD",
-    "id": "1501601829574135813",
-    "created_at": "Wed Mar 09 16:52:29 +0000 2022",
-    "likes": 1,
-    "retweets": 0,
-    "lang": "in",
-    "topic": "positive_emoji",
-    "base_word": "ana begad"
-  },
-  {
-    "text": "1 week. #FarihaWedsFarhan \nInshAllah.\n#mybridalstories #7daystoGo #Whereisthetimeflying",
-    "id": "545356432862760961",
-    "created_at": "Wed Dec 17 23:14:40 +0000 2014",
-    "likes": 1,
-    "retweets": 0,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "inshallah"
-  },
-  {
-    "text": "ya gama3aaa hottie ezay kedaa what is his @ omgggg how do u like ur eggs hahahaha",
-    "id": "1244381876032176129",
-    "created_at": "Sun Mar 29 21:52:13 +0000 2020",
-    "likes": 22,
-    "retweets": 0,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "ezay"
-  },
-  {
-    "text": "kol sana we ekhwatna el meshyeen be kheir we dayman meswaheen baad we dakhleen fe mosalsal el 3eshq el mamnoo3",
-    "id": "1347130546808385537",
-    "created_at": "Thu Jan 07 10:38:45 +0000 2021",
-    "likes": 34,
-    "retweets": 2,
-    "lang": "hi",
-    "topic": "positive_emoji",
-    "base_word": "mosalsal"
-  },
-  {
-    "text": "wowww shoofoo shloon ya3ref 3arabi banat lazim nebda inshoof el mosalsal",
-    "id": "1414958798071111694",
-    "created_at": "Tue Jul 13 14:44:00 +0000 2021",
-    "likes": 8,
-    "retweets": 0,
-    "lang": "tl",
-    "topic": "positive_emoji",
-    "base_word": "mosalsal"
-  },
-  {
-    "text": "ana hasa eny bafarag twitter kolo ma3aya ala ay mosalsal w ha2e2y it’s entertaining to ME fa estahmelony showaya",
-    "id": "1771616011835330739",
-    "created_at": "Sat Mar 23 19:12:26 +0000 2024",
-    "likes": 50,
-    "retweets": 0,
-    "lang": "in",
-    "topic": "positive_emoji",
-    "base_word": "mosalsal"
-  },
-  {
-    "text": "Amina is a disaster, and her bag is a crime w msh 3arfa ezay keda :'). Bs Riham really rockssss",
-    "id": "1043661297848606720",
-    "created_at": "Sun Sep 23 00:40:18 +0000 2018",
-    "likes": 2,
-    "retweets": 0,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "ezay keda"
-  },
-  {
-    "text": "Gama3a hawlo hawlo matkhlosh had y pick you up fe el first date cause you’re gonna regret eno ye3raf beitek gedan",
-    "id": "1986430963522441399",
-    "created_at": "Thu Nov 06 13:50:22 +0000 2025",
-    "likes": 223,
-    "retweets": 4,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "gedan"
-  },
-  {
-    "text": "Habayb alby, ana mashghoula gedan bgd el ftra di f emtahanat w kza haga mohemma tnyeen awl mafda hant2abel. Est7mloni ma3lsh. Love you",
-    "id": "666230745506148353",
-    "created_at": "Mon Nov 16 12:26:02 +0000 2015",
-    "likes": 136,
-    "retweets": 102,
-    "lang": "in",
-    "topic": "positive_emoji",
-    "base_word": "gedan"
-  },
-  {
-    "text": "ana lesa mab3utly bereal (mn wahda ana kunt actually a3rafha) wel sura feeha vibrator w kol el reactions w hasa el hwa,,,,mahadash mestaghrab at all? mafeesh wahda khales?",
-    "id": "1615024618443505680",
-    "created_at": "Mon Jan 16 16:34:09 +0000 2023",
-    "likes": 13,
-    "retweets": 0,
-    "lang": "ca",
-    "topic": "positive_emoji",
-    "base_word": "mafeesh"
-  },
-  {
-    "text": "mahtaga had ye2olyy noureen fo2y mafeesh wa2t yekoun 3andek interest fy had dlw2tyy",
-    "id": "1515421472197599233",
-    "created_at": "Sat Apr 16 20:06:48 +0000 2022",
-    "likes": 5,
-    "retweets": 0,
-    "lang": "tl",
-    "topic": "positive_emoji",
-    "base_word": "mafeesh"
-  },
-  {
-    "text": "33:mafeesh ahla men keda walahi masha'allahh,mafeesh ta3amol kebeer bena bas ana bahebekk w amarr masha'allahh",
-    "id": "898395148568100864",
-    "created_at": "Fri Aug 18 04:04:29 +0000 2017",
-    "likes": 1,
-    "retweets": 1,
-    "lang": "in",
-    "topic": "positive_emoji",
-    "base_word": "mafeesh"
-  },
-  {
-    "text": "El trends betetghayar kol youm, bas el confidence el 7a2i2y mafeesh algorithm ye2dar yenzelo #QueenEnergy",
-    "id": "2087864099728203870",
-    "created_at": "Thu Aug 13 11:29:26 +0000 2026",
-    "likes": 1,
-    "retweets": 0,
-    "lang": "ca",
-    "topic": "positive_emoji",
-    "base_word": "mafeesh"
-  },
-  {
-    "text": "“mafeesh 7ad salek” eslaky enty el awel ba3d keda etkalemy",
-    "id": "1406368094256312321",
-    "created_at": "Sat Jun 19 21:47:37 +0000 2021",
-    "likes": 20,
-    "retweets": 4,
-    "lang": "ht",
-    "topic": "positive_emoji",
-    "base_word": "mafeesh"
-  },
-  {
-    "text": "Mafeesh ahlaa mn enk teb2aa dymaan raf3 rass ahlkk walahy",
-    "id": "931946338312482817",
-    "created_at": "Sat Nov 18 18:04:56 +0000 2017",
-    "likes": 2,
-    "retweets": 5,
-    "lang": "in",
-    "topic": "positive_emoji",
-    "base_word": "mafeesh"
-  },
-  {
-    "text": ": Bada2na neb2a sohab aktar w enty 3arfa akeed bahebek ad ehh , W mafeesh sohab by2olo mercii l ba3d ha",
-    "id": "747811305600462848",
-    "created_at": "Tue Jun 28 15:18:03 +0000 2016",
-    "likes": 1,
-    "retweets": 1,
+    "text": "Rt whtklm 3nk ana w anon taweel awy",
+    "id": "1165593907654266886",
+    "created_at": "Sun Aug 25 11:56:57 +0000 2019",
+    "likes": 10,
+    "retweets": 55,
     "lang": "et",
     "topic": "positive_emoji",
-    "base_word": "mafeesh"
+    "base_word": "awy"
   },
   {
-    "text": "Ay haga fiha Tamer hosny gamda ya ged3an",
-    "id": "1125403325845921793",
-    "created_at": "Mon May 06 14:13:56 +0000 2019",
-    "likes": 5,
-    "retweets": 6,
-    "lang": "in",
+    "text": "Rt W htklm 3nk ana w anona amarr awy",
+    "id": "1221169603486810118",
+    "created_at": "Sat Jan 25 20:34:56 +0000 2020",
+    "likes": 31,
+    "retweets": 104,
+    "lang": "pl",
     "topic": "positive_emoji",
-    "base_word": "ya ged3an"
+    "base_word": "awy"
   },
   {
-    "text": "Elnas el bys2alo 3alek b3d kol emthan dol mafish zayohom wlahy",
-    "id": "683607854532706304",
-    "created_at": "Sun Jan 03 11:16:27 +0000 2016",
+    "text": "Rt w hatklm 3nk ana w anoon 2mr awy",
+    "id": "1214699749116436481",
+    "created_at": "Wed Jan 08 00:06:02 +0000 2020",
+    "likes": 19,
+    "retweets": 29,
+    "lang": "en",
+    "topic": "positive_emoji",
+    "base_word": "awy"
+  },
+  {
+    "text": "Rt w htklm 3nk m3 unknown tayba awy",
+    "id": "1306971996652265472",
+    "created_at": "Fri Sep 18 15:03:01 +0000 2020",
     "likes": 23,
-    "retweets": 148,
-    "lang": "und",
+    "retweets": 43,
+    "lang": "et",
     "topic": "positive_emoji",
-    "base_word": "mafish"
+    "base_word": "awy"
   },
   {
-    "text": "Mafish had matel3sh ebn weskha ma3aya *",
-    "id": "1092749684869873665",
-    "created_at": "Tue Feb 05 11:40:01 +0000 2019",
-    "likes": 118,
-    "retweets": 147,
-    "lang": "hi",
-    "topic": "positive_emoji",
-    "base_word": "mafish"
-  },
-  {
-    "text": "Habda2 episode the battle of the bastards delwa2ty hagy ba3d makhalasaha abdy ra2ye fel hala2a",
-    "id": "1573306387274563584",
-    "created_at": "Fri Sep 23 13:40:48 +0000 2022",
-    "likes": 4,
-    "retweets": 0,
-    "lang": "tl",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "E7betoona delwa2ty w haneksefko kasfa wehsha awy 5 senin odam",
-    "id": "884602576490070016",
-    "created_at": "Tue Jul 11 02:37:44 +0000 2017",
-    "likes": 0,
-    "retweets": 0,
-    "lang": "sl",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "Fa: ahla mentality shoftaha lehad delwa2ty begad I love how funny youu are wenek konty bta7taweeny ba3d el theatre LOVE YOU MAAAN",
-    "id": "883657412531695616",
-    "created_at": "Sat Jul 08 12:01:59 +0000 2017",
-    "likes": 1,
-    "retweets": 1,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "Woke up on the sound of rain w Ana f ghayet sa3adty delwa2ty",
-    "id": "1323857428983750659",
-    "created_at": "Wed Nov 04 05:19:41 +0000 2020",
-    "likes": 10,
-    "retweets": 5,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "No fucking one:\nSomeone on kersh keepers: ezay ya gam3a le7ad delwa2ty magbtosh sert kobyt l shay l 3adya fash5!",
-    "id": "1130694473854459904",
-    "created_at": "Tue May 21 04:39:04 +0000 2019",
-    "likes": 11,
-    "retweets": 1,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "Ma3ady f bet 11 w da5la delwa2ty w el a7la kaman en papy el fata7ly el bab",
-    "id": "1601341791160369153",
-    "created_at": "Fri Dec 09 22:23:29 +0000 2022",
-    "likes": 8,
-    "retweets": 0,
-    "lang": "ht",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "El beit delwa2ty fe 4 otat w i couldn't be happier besaraha",
-    "id": "1695913168000647574",
-    "created_at": "Sun Aug 27 21:36:22 +0000 2023",
-    "likes": 5,
-    "retweets": 1,
-    "lang": "en",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "IK: elragel elshyaka awy 2lly makansh byte2ny wala bageelo seka bas delwa2ty by7ebny fash5 w ana 3aref keda kwyes 7abeeby ya solom",
-    "id": "722132381344391168",
-    "created_at": "Mon Apr 18 18:39:10 +0000 2016",
-    "likes": 0,
-    "retweets": 1,
-    "lang": "tl",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "Men el sa3a 1 el dohr b2oul habda2 azaker w lesa mabad2tsh lhad delwa2ty",
-    "id": "781979300048277504",
-    "created_at": "Fri Sep 30 22:09:28 +0000 2016",
-    "likes": 3,
+    "text": ": Bossbosss mat3mlnashh kteer khlesss basss bgd lama bashofek bahes enk taypaaa awy we ra2e2a we 3eneke helwahh gdnn masha'allahh",
+    "id": "883448703335493632",
+    "created_at": "Fri Jul 07 22:12:39 +0000 2017",
+    "likes": 2,
     "retweets": 1,
     "lang": "in",
     "topic": "positive_emoji",
-    "base_word": "delwa2ty"
-  },
-  {
-    "text": "we don’t talk awy delwa2ty bas heya shakhseya helwa awy w maskhara",
-    "id": "1052926887314505731",
-    "created_at": "Thu Oct 18 14:18:27 +0000 2018",
-    "likes": 8,
-    "retweets": 1,
-    "lang": "hi",
-    "topic": "positive_emoji",
-    "base_word": "delwa2ty"
+    "base_word": "awy"
   }
 ]
